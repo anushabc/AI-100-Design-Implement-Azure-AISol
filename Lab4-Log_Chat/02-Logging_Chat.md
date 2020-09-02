@@ -27,11 +27,11 @@ Let's take a look and what information we can glean, for testing purposes, witho
 
 > **Note** You can use the **Starter** solution if you did not do Lab 3.
 
-1. Press **F5** to run your bot
+2. Press **F5** to run your bot
 
-1. Open the bot in the Bot Framework Emulator and have a quick conversation:
+3. Open the bot in the Bot Framework Emulator and have a quick conversation:
 
-1. Review the bot emulator debug area, notice the following:
+4. Review the bot emulator debug area, notice the following:
 
 - If you click on a message, you are able to see its associated JSON with the "Inspector-JSON" tool on the right. Click on a message and inspect the JSON to see what information you can obtain.
 
@@ -61,7 +61,7 @@ IStorage dataStore = new MemoryStorage();
 
 As you can see, our current implementation is using in-memory storage. Again, this memory storage is recommended for local bot debugging only. When the bot is restarted, anything stored in memory will be gone.
 
-1. Replace the current `IStorage` line with the following to change it to a FileStorage based persistance:
+2. Replace the current `IStorage` line with the following to change it to a FileStorage based persistance:
 
 ```csharp
 var blobConnectionString = Configuration.GetSection("BlobStorageConnectionString")?.Value;
@@ -69,34 +69,34 @@ var blobContainer = Configuration.GetSection("BlobStorageContainer")?.Value;
 IStorage dataStore = new Microsoft.Bot.Builder.Azure.AzureBlobStorage(blobConnectionString, blobContainer);
 ```
 
-1. Switch to the Azure Portal, navigate to your blob storage account
+3. Switch to the Azure Portal, navigate to your blob storage account
 
-1. From the **Overview** tab, click **Containers**
+4. From the **Overview** tab, click **Containers**
 
-1. Check if a **chatlog** container exists, if it does not click **+Container**:
+5. Check if a **chatlog** container exists, if it does not click **+Container**:
 
 - For the name, type **chatlog**, click **OK**
 
-1. If you haven't already done so, click **Access keys** and record your connection string
+6. If you haven't already done so, click **Access keys** and record your connection string
 
-1. Open the **appsettings.json** and add your blob connection string details:
+7. Open the **appsettings.json** and add your blob connection string details:
 
 ```json
 "BlobStorageConnectionString": "",
 "BlobStorageContainer" :  "chatlog"
 ```
 
-1. Press **F5** to run the bot.
+8. Press **F5** to run the bot.
 
-1. In the emulator, go through a sample conversation with the bot.
+9. In the emulator, go through a sample conversation with the bot.
 
 > **Note** If you do note get a reply back, check your Azure Storage Account connection string
 
-1. Switch to the Azure Portal, navigate to your blob storage account
+10. Switch to the Azure Portal, navigate to your blob storage account
 
-1. Click **Containers**, then open the **ChatLog** container
+11. Click **Containers**, then open the **ChatLog** container
 
-1. Select the chat log file, it should start with **emulator...**, then select **Edit blob**.  What do you see in the files? What don't you see that you were expecting/hoping to see?
+12. Select the chat log file, it should start with **emulator...**, then select **Edit blob**.  What do you see in the files? What don't you see that you were expecting/hoping to see?
 
 You should see something similar to this:
 
@@ -112,7 +112,7 @@ We can do this by updating what we're storing in our `UserData` object in the **
 
 1. Open **PictureState.cs**
 
-1. **after** the following code:
+2. **After** the following code:
 
 ```csharp
 public class PictureState
@@ -135,7 +135,7 @@ In this example we're choosing to use the state manager to read and write data, 
 
 The final thing we have to do before we run the bot is add messages to our list with our `OnTurn` action.
 
-1. In **PictureBot.cs**, **after** the following code:
+3. In **PictureBot.cs**, **after** the following code:
 
 ```csharp
 public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
@@ -157,9 +157,9 @@ await _accessors.ConversationState.SaveChangesAsync(turnContext);
 
 The first line takes the incoming message from a user and stores it in a variable called `utterance`. The next line adds the utterance to the existing list that we created in PictureState.cs.
 
-1. Press **F5** to run the bot.
+4. Press **F5** to run the bot.
 
-1. Have another conversation with the bot. Stop the bot and check the latest blob persisted log file. What do we have now?
+5. Have another conversation with the bot. Stop the bot and check the latest blob persisted log file. What do we have now?
 
 ```json
 {"$type":"System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Collections.Concurrent","DialogState":{"$type":"Microsoft.Bot.Builder.Dialogs.DialogState, Microsoft.Bot.Builder.Dialogs","DialogStack":{"$type":"System.Collections.Generic.List`1[[Microsoft.Bot.Builder.Dialogs.DialogInstance, Microsoft.Bot.Builder.Dialogs]], System.Private.CoreLib","$values":[{"$type":"Microsoft.Bot.Builder.Dialogs.DialogInstance, Microsoft.Bot.Builder.Dialogs","Id":"mainDialog","State":{"$type":"System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Private.CoreLib","options":null,"values":{"$type":"System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]], System.Private.CoreLib"},"instanceId":"f80db88d-cdea-4b47-a3f6-a5bfa26ed60b","stepIndex":0}}]}},"PictureBotAccessors.PictureState":{"$type":"Microsoft.PictureBot.PictureState, PictureBot","Greeted":"greeted","UtteranceList":{"$type":"System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib","$values":["help"]},"Search":"","Searching":"no"}}
