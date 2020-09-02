@@ -24,7 +24,7 @@ In the continuation of this lab throughout the course, we'll show you how to que
 
 ## Lab 1.2: Resources
 
-There are some directories in the [main](https://github.com/MicrosoftLearning/AI-100-Design-Implement-Azure-AISol/blob/master/Lab2-Implement_Computer_Vision/) github repo folder:
+There are some directories under the `C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master` folder in your virtual machine:
 
 - **sample_images**: Some sample images to use in testing your implementation of Cognitive Services.
 
@@ -54,7 +54,7 @@ Let's talk about how we're going to call Cognitive Services in our application b
 
 ### Image Processing Library
 
-1. Open the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\ImageProcessing.sln** solution
+1. From virtual machine, open the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\ImageProcessing.sln** solution
 
 Within your `ImageProcessing` solution you'll find the `ProcessingLibrary` project. It serves as a wrapper around several services. This specific PCL contains some helper classes (in the ServiceHelpers folder) for accessing the Computer Vision API and an "ImageInsights" class to encapsulate the results.
 
