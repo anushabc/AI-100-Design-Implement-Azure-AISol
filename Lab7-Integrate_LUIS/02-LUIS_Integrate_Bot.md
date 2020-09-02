@@ -158,18 +158,18 @@ Another thing to note is that after every response that called LUIS, we're addin
 
 ## Lab 2.3: Testing natural speech phrases
 
-1. Right-click the project, select Manage Nuget Packagaes
+1. Right-click the project, select **Manage Nuget Packagaes**
 
-Select the Browse tab, and install the following packages, ensure that you are using version 4.6.3:
+2. Select the **Browse** tab, and install the following packages, ensure that you are using version **4.6.3**:
 
--Microsoft.Bot.Builder.Azure
--Microsoft.Bot.Builder.AI.Luis
--Microsoft.Bot.Builder.Dialogs
--Microsoft.Azure.Search (version, 10.1.0 or later)
+* Microsoft.Bot.Builder.Azure
+* Microsoft.Bot.Builder.AI.Luis
+* Microsoft.Bot.Builder.Dialogs
+* Microsoft.Azure.Search (version, 10.1.0 or later)
 
-2. Press **F5** to run the app.
+3. Press **F5** to run the app.
 
-3. Switch to your Bot Emulator. Try sending the bots different ways of searching pictures. What happens when you say "send me pictures of water" or "show me dog pics"? Try some other ways of asking for, sharing and ordering pictures.
+4. Switch to your Bot Emulator. Try sending the bots different ways of searching pictures. What happens when you say "send me pictures of water" or "show me dog pics"? Try some other ways of asking for, sharing and ordering pictures.
 
 If you have extra time, see if there are things LUIS isn't picking up on that you expected it to. Maybe now is a good time to go to luis.ai, [review your endpoint utterances](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/label-suggested-utterances), and retrain/republish your model.
 
