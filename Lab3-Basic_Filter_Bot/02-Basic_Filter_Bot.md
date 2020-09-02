@@ -51,7 +51,7 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. Select the **Manage** link for the **Microsoft App ID**
 
-![Select the Manage link](../images/ManageBot.png)
+      ![Select the Manage link](../images/ManageBot.png)
 
 1. Select **New client secret**
 
@@ -79,14 +79,14 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. Scroll down until you see **Echo Bot (Bot Framework v4)**
 
->[!CAUTION]
->Depending on the version of Visual Studio installed, the below screenshot may be different from your own.  If you see multiple versions listed for the Echo Bot template, choose version 3.1 and not version 2.1.
+     >[!CAUTION]
+     >Depending on the version of Visual Studio installed, the below screenshot may be different from your own.  If you see multiple versions listed for the Echo Bot template, choose version 3.1 and not version 2.1.
 
-![Select the Echo Bot project template](../images/NewBotProject.png)
+     ![Select the Echo Bot project template](../images/NewBotProject.png)
 
 1. Select **Next**
 
-> **Note** If you do not see the Echo Bot template, you need to install the Visual Studio add-in from the pre-req steps.
+      > **Note** If you do not see the Echo Bot template, you need to install the Visual Studio add-in from the pre-req steps.
 
 1. For the name, type **PictureBot**, select **Create**
 
@@ -96,12 +96,12 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. Open the **appsettings.json** file, update it by adding your bot service information you recorded above:
 
-```json
-{
-    "MicrosoftAppId": "YOURAPPID",
-    "MicrosoftAppPassword": "YOURAPPSECRET"
-}
-```
+   ```json
+      {
+          "MicrosoftAppId": "YOURAPPID",
+          "MicrosoftAppPassword": "YOURAPPSECRET"
+      }
+    ```
 
 1. As you may know, renaming a Visual Studio Solution/Project is a very sensitive task. **Carefully** complete the following tasks so all the names reflect PictureBot instead of EchoBot:
 
@@ -109,18 +109,20 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. If you are not prompted then you will need to manually rename the class and then change all references to the class to **PictureBot**.  You will know if you missed one when you attempt to build the project.
 
+1. Open Startup.cs file and  make sure that **using PictureBot.Bots;** is inside the namespace **PictureBot** and outside the class Startup.      
+
 1. Right-click the project, select **Manage Nuget Packagaes**
 
 1. Select the **Browse** tab, and install the following packages, ensure that you are using version **4.6.3**:
 
-* Microsoft.Bot.Builder.Azure
-* Microsoft.Bot.Builder.AI.Luis
-* Microsoft.Bot.Builder.Dialogs
-* Microsoft.Azure.Search (version, 10.1.0 or later)
-
+      * Microsoft.Bot.Builder.Azure
+      * Microsoft.Bot.Builder.AI.Luis
+      * Microsoft.Bot.Builder.Dialogs
+      * Microsoft.Azure.Search (version, 10.1.0 or later)
+      
 1. Build the solution.
 
->**TIP**:  If you only have one monitor and you would like to easily switch between instructions and Visual Studio, you can now add the instruction files to your Visual Studio solution by right-clicking on the project in Solution Explorer and selecting **Add > Existing Item**. Navigate to "Lab2," and add all the files of type "MD File."
+    >**TIP**:  If you only have one monitor and you would like to easily switch between instructions and Visual Studio, you can now add the instruction files to your Visual Studio solution by right-clicking on the project in Solution Explorer and selecting **Add > Existing Item**. Navigate to "Lab2," and add all the files of type "MD File."
 
 ### Creating a Hello World bot
 
@@ -129,7 +131,7 @@ So now that we've updated our base shell to support the naming and NuGet package
 An important concept is the `turn`, used to describe a message to a user and a response from the bot.
 For example, if I say "Hello bot" and the bot responds "Hi, how are you?" that is **one** turn. Check in the image below how a **turn** goes through the multiple layers of a bot application.
 
-![Bots Concepts](../images/bots-concepts-middleware.png)
+   ![Bots Concepts](../images/bots-concepts-middleware.png)
 
 1. Open the **PictureBot.cs** file.  
 
@@ -137,47 +139,47 @@ For example, if I say "Hello bot" and the bot responds "Hi, how are you?" that i
 
 1. Press **F5** to start debugging.
 
-A few things to **Note**
+      A few things to **Note**
 
-* Your default.htm (under wwwroot) page will be displayed in a browser
+      * Your default.htm (under wwwroot) page will be displayed in a browser
 
-* Note the localhost port number for the web page. This should (and must) match the endpoint in your Emulator.
+      * Note the localhost port number for the web page. This should (and must) match the endpoint in your Emulator.
 
->Get stuck or broken? You can find the solution for the lab up until this point under {GitHubPath}/code/Finished/PictureBot-Part0. The readme file within the solution (once you open it) will tell you what keys you need to add in order to run the solution.
+     >Get stuck or broken? You can find the solution for the lab up until this point under {GitHubPath}/code/Finished/PictureBot-Part0. The readme file within the solution (once you open it) will tell you what keys you need to add in order to run the solution.
 
-#### Using the Bot Framework Emulator
+   #### Using the Bot Framework Emulator
 
-To interact with your bot:
+     To interact with your bot:
 
-* Launch the Bot Framework Emulator (note we are using the v4 Emulator).  Select **Start**, then search for **Bot Emulator**.
+1. Launch the Bot Framework Emulator (note we are using the v4 Emulator).  Select **Start**, then search for **Bot Emulator**.
 
-* On the welcome page, select **Create a new bot configuration**
+1. On the welcome page, select **Create a new bot configuration**
 
-* For the name, type **PictureBot**
+1. For the name, type **PictureBot**
 
-* Enter the url that is displayed on your bot web page
+1. Enter the url that is displayed on your bot web page
 
-* Enter the AppId and the App Secret your entered into the appsettings.json
+1. Enter the AppId and the App Secret your entered into the appsettings.json
 
->**Note** If you do not enter id and secret values into the bot settings you would also not need to enter the values in the bot emulator
+     >**Note** If you do not enter id and secret values into the bot settings you would also not need to enter the values in the bot emulator
 
-* Select **Save and connect**, then save your .bot file locally
+1. Select **Save and connect**, then save your .bot file locally
 
-* You should now be able to converse with the bot.
+1. You should now be able to converse with the bot.
 
-* Type **hello**. The bot will respond with echoing your message similar to the Azure bot we created earlier.
+1. Type **hello**. The bot will respond with echoing your message similar to the Azure bot we created earlier.
 
-> **Note** You can select "Restart conversation" to clear the conversation history.
+     > **Note** You can select "Restart conversation" to clear the conversation history.
 
-![Bot Emulator](../images/botemulator3.png)
+     ![Bot Emulator](../images/botemulator3.png)
 
-In the Log, you should see something similar to the following:
+     In the Log, you should see something similar to the following:
 
-![ngrok](../images/ngrok.png)
+    ![ngrok](../images/ngrok.png)
 
-Note how it says we will bypass ngrok for local addresses. We will not be using ngrok in this workshop, but we would if we were connecting to our published version of the bot, we would do so via the 'production' endpoint. Open the 'production' endpoint and observe the difference between bots in different environments. This can be a useful feature when you're testing and comparing your development bot to your production bot.
+     Note how it says we will bypass ngrok for local addresses. We will not be using ngrok in this workshop, but we would if we were connecting to our published version of the bot, we would do so via the 'production' endpoint. Open the 'production' endpoint and observe the difference between bots in different environments. This can be a useful feature when you're testing and comparing your development bot to your production bot.
 
-You can read more about using the Emulator [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
+   You can read more about using the Emulator [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
 
 1. Browse around and examine the sample bot code. In particular:
 
@@ -191,22 +193,24 @@ You can read more about using the Emulator [here](https://docs.microsoft.com/en-
 
 1. Update the list of `using` statements by **adding** the following:
 
-```csharp
-using System;
-using System.Linq;
-using System.Text.RegularExpressions;
-using Microsoft.Bot.Builder.Integration;
-using Microsoft.Bot.Configuration;
-using Microsoft.Bot.Connector.Authentication;
-using Microsoft.Extensions.Options;
-using Microsoft.Extensions.Logging;
-using Microsoft.PictureBot;
+   ```csharp
+      using System;
+      using System.Linq;
+      using System.Text.RegularExpressions;
+      using Microsoft.Bot.Builder.Integration;
+      using Microsoft.Bot.Configuration;
+      using Microsoft.Bot.Connector.Authentication;
+      using Microsoft.Extensions.Options;
+      using Microsoft.Extensions.Logging;
+      using Microsoft.PictureBot;
 
-using Microsoft.Bot.Builder.AI.Luis;
-using Microsoft.Bot.Builder.Dialogs;
-```
+      using Microsoft.Bot.Builder.AI.Luis;
+      using Microsoft.Bot.Builder.Dialogs;
+   ```
 
-We won't use all of the above namespaces just yet, but can you guess when we might?
+   We won't use all of the above namespaces just yet, but can you guess when we might?
+   
+1. Make sure that **using PictureBot.Bots;** is outside the namespace **PictureBot**.      
 
 1. In the **Startup.cs** class, focus your attention on the `ConfigureServices` method which is used to add services to the bot. Review the contents carefully, noting what is built in for you.
 
@@ -235,16 +239,16 @@ The SDK allows you to write your own middleware or add reusable components of mi
 
 1. Add the following variables to your **Startup** class:
 
-```csharp
-private ILoggerFactory _loggerFactory;
-private bool _isProduction = false;
-```
+   ```csharp
+      private ILoggerFactory _loggerFactory;
+      private bool _isProduction = false;
+   ```
 
 1. Replace the following code in the **ConfigureServices** method:
 
-```csharp
-services.AddTransient<IBot, PictureBot.Bots.PictureBot>();
-```
+   ```csharp
+      services.AddTransient<IBot, PictureBot.Bots.PictureBot>();
+   ```
 
 with the following code:
 
@@ -300,7 +304,7 @@ services.AddBot<PictureBot.Bots.PictureBot>(options =>
 });
 ```
 
-1. Replace the **Configure** method with the following code:
+6. Replace the **Configure** method with the following code:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
