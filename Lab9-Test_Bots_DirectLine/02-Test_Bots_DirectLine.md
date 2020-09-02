@@ -43,7 +43,7 @@ Ensure that you update the **appsettings.json** file with all the necessary valu
 
 1. Right-click the project and select **Publish**
 
-1. In the publish dialog, select **Select Existing**, then select **Publish**
+1. In the publish dialog, select **Select Azure** -> then select **Azure App Service(windows)** -> then select the app service you created earlier and then select **Publish**
 
 1. If prompted, login using the account you have used through the labs
 
