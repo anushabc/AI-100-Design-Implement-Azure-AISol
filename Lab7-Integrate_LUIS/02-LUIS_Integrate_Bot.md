@@ -17,7 +17,7 @@ We will have to update our bot in order to use LUIS.  We can do this by modifyin
 > **NOTE** You can also start with the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master}/Lab7-Integrate_LUIS/code/Starter/PictureBot/PictureBot.sln** solution if you did not start from Lab 1.
 > Be sure to replace all the app settings values
 
-1. Open **Startup.cs** and locate the `ConfigureServices` method. We'll add LUIS here by adding an additional service for LUIS after creating and registering the state accessors.
+2. Open **Startup.cs** and locate the `ConfigureServices` method. We'll add LUIS here by adding an additional service for LUIS after creating and registering the state accessors.
 
 Below:
 
@@ -56,7 +56,7 @@ services.AddSingleton(sp =>
 });
 ```
 
-1. Modify the **appsettings.json** to include the following properties, be sure to fill them in with your LUIS instance values:
+3. Modify the **appsettings.json** to include the following properties, be sure to fill them in with your LUIS instance values:
 
 ```json
 "luisAppId": "",
@@ -74,7 +74,7 @@ services.AddSingleton(sp =>
 private LuisRecognizer _recognizer { get; } = null;
 ```
 
-1. Navigate to the **PictureBot** constructor:
+2. Navigate to the **PictureBot** constructor:
 
 ```csharp
 public PictureBot(PictureBotAccessors accessors, ILoggerFactory loggerFactory /*, LuisRecognizer recognizer*/)
@@ -82,7 +82,7 @@ public PictureBot(PictureBotAccessors accessors, ILoggerFactory loggerFactory /*
 
 Now, maybe you noticed we had this commented out in your previous labs, maybe you didn't. You have it commented out now, because up until now, you weren't calling LUIS, so a LUIS recognizer didn't need to be an input to PictureBot. Now, we are using the recognizer.
 
-1. Uncomment the input requirement (parameter `LuisRecognizer recognizer`), and add the following line below `// Add instance of LUIS Recognizer`:
+3. Uncomment the input requirement (parameter `LuisRecognizer recognizer`), and add the following line below `// Add instance of LUIS Recognizer`:
 
 ```csharp
 _recognizer = recognizer ?? throw new ArgumentNullException(nameof(recognizer));
@@ -92,7 +92,7 @@ Again, this should look very similar to how we initialized the instance of `_acc
 
 As far as updating our `MainDialog` goes, there's no need for us to add anything to the initial `GreetingAsync` step, because regardless of user input, we want to greet the user when the conversation starts.
 
-1. In `MainMenuAsync`, we do want to start by trying Regex, so we'll leave most of that. However, if Regex doesn't find an intent, we want the `default` action to be different. That's when we want to call LUIS.
+4. In `MainMenuAsync`, we do want to start by trying Regex, so we'll leave most of that. However, if Regex doesn't find an intent, we want the `default` action to be different. That's when we want to call LUIS.
 
 Within the `MainMenuAsync` switch block, replace:
 
@@ -160,7 +160,7 @@ Another thing to note is that after every response that called LUIS, we're addin
 
 1. Press **F5** to run the app.
 
-1. Switch to your Bot Emulator. Try sending the bots different ways of searching pictures. What happens when you say "send me pictures of water" or "show me dog pics"? Try some other ways of asking for, sharing and ordering pictures.
+2. Switch to your Bot Emulator. Try sending the bots different ways of searching pictures. What happens when you say "send me pictures of water" or "show me dog pics"? Try some other ways of asking for, sharing and ordering pictures. You have perform this in Module 2
 
 If you have extra time, see if there are things LUIS isn't picking up on that you expected it to. Maybe now is a good time to go to luis.ai, [review your endpoint utterances](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/label-suggested-utterances), and retrain/republish your model.
 
