@@ -22,7 +22,7 @@ In this lab we are going to integrate language detection ability of cognitive se
 
 1. Search for **Microsoft.Azure.CognitiveServices.Language.TextAnalytics**, select it then select **Install**, then select **I Accept**
 
-1. Open the **Startup.cs** file, add the following using statements:
+1. Open the **Startup.cs** file, Check the following using statements:
 
 ```csharp
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
@@ -30,7 +30,7 @@ using Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models;
 using Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime;
 ```
 
-1. Add the following code to the **ConfigureServices** method:
+1. Check the following code to the **ConfigureServices** method:
 
 ```csharp
 services.AddSingleton(sp =>
@@ -48,26 +48,26 @@ services.AddSingleton(sp =>
 });
 ```
 
-1. Open the **PictureBot.cs** file, add the following using statements:
+1. Open the **PictureBot.cs** file, check the following using statements:
 
 ```csharp
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models;
 ```
 
-1. Add the following class variable:
+1. check the following class variable:
 
 ```csharp
 private TextAnalyticsClient _textAnalyticsClient;
 ```
 
-1. Modify the constructor to include the new TextAnalyticsClient:
+1. Check whether the constructor includes the new TextAnalyticsClient:
 
 ```csharp
 public PictureBot(PictureBotAccessors accessors, ILoggerFactory loggerFactory,LuisRecognizer recognizer, TextAnalyticsClient analyticsClient)
 ```
 
-1. Inside the constructor, initialize the class variable:
+1. Inside the constructor, check the class variable is initialized:
 
 ```csharp
 _textAnalyticsClient = analyticsClient;
@@ -82,7 +82,7 @@ state.UtteranceList.Add(utterance);
 await _accessors.ConversationState.SaveChangesAsync(turnContext);
 ```
 
-1. Add the following line of code after it
+1. Check the following line of code is present after it
 
 ```csharp
 //Check the language
