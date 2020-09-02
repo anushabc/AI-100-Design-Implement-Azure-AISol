@@ -68,22 +68,22 @@ Let's look at how we can use LUIS to add some natural language capabilities. LUI
 
 1. Sign in using your Organization or Microsoft account. This should be the same account that you used to create the LUIS key in the previous section.
 
-1. Select **Create a LUIS app now**. You should be redirected to a list of your LUIS applications.  If prompted, select **Migrate Later**.
+1. Select **Create a LUIS app now**. You should be redirected to a list of your LUIS applications. If prompted, select **Migrate Later**.
 
 1. If this is your first time, you will be asked to agree with service terms of use and select your county.
 
 - On next step you need to chose recommended option and link your Azure account with LUIS.
 - Finally confirm your settings and you will be forwarded to the LUIS App page.
 
-> **Note**: Notice that there is also an "Import App" next to the "New App" button on [the current page](https://www.luis.ai/applications).  After creating your LUIS application, you have the ability to export the entire app as JSON and check it into source control.  This is a recommended best practice, so you can version your LUIS models as you version your code.  An exported LUIS app may be re-imported using that "Import App" button.  If you fall behind during the lab and want to cheat, you can select the "Import App" button and import the [LUIS model](./code/LUIS/PictureBotLuisModel.json).
+> **Note**: Notice that there is also an "Import App" next to the "New App" button on [the current page](https://www.luis.ai/applications). After creating your LUIS application, you have the ability to export the entire app as JSON and check it into source control. This is a recommended best practice, so you can version your LUIS models as you version your code.  An exported LUIS app may be re-imported using that "Import App" button. If you fall behind during the lab and want to cheat, you can select the "Import App" button and import the [LUIS model](./code/LUIS/PictureBotLuisModel.json).
 
 1. From the main page, select the **Create new app** button
 
-1. Type a name, and select **Done**.  Close the "How to create an effective LUIS app" dialog.
+1. Type a name, and select **Done**. Close the "How to create an effective LUIS app" dialog.
 
 ![LUIS New App](../images//LuisNewApp.png)
 
-1. In the top navigation, select the **BUILD** link.  Notice there is one intent called "None".  Random utterances that don't map to any of your intents may be mapped to "None".
+1. In the top navigation, select the **BUILD** link. Notice there is one intent called "None". Random utterances that don't map to any of your intents may be mapped to "None".
 
 ![LUIS Dashboard](../images//LuisCreateIntent.png)
 
@@ -104,7 +104,7 @@ Let's create intents for the user requesting each of these.
 
 ![LUIS Greeting Intent](../images//LuisGreetingIntent.png)
 
-Let's see how to create an entity.  When the user requests to search the pictures, they may specify what they are looking for.  Let's capture that in an entity.
+Let's see how to create an entity.  When the user requests to search the pictures, they may specify what they are looking for. Let's capture that in an entity.
 
 1. Select on **Entities** in the left-hand column and then select **+ Create**.
 
@@ -120,7 +120,7 @@ Let's see how to create an entity.  When the user requests to search the picture
 
 1. Give it an intent name of **SearchPic** and then click **Done**.
 
-Just as we did for Greetings, let's add some sample utterances (words/phrases/sentences the user might say when talking to the bot).  People might search for pictures in many ways.  Feel free to use some of the utterances below, and add your own wording for how you would ask a bot to search for pictures.
+Just as we did for Greetings, let's add some sample utterances (words/phrases/sentences the user might say when talking to the bot). People might search for pictures in many ways.  Feel free to use some of the utterances below, and add your own wording for how you would ask a bot to search for pictures.
 
 - Find outdoor pics
 - Are there pictures of a train?
@@ -164,7 +164,7 @@ When choosing utterances, it can be helpful to use a combination of questions, c
 
 ## Lab 1.2: Training the LUIS model
 
-We're now ready to train our model. In this exercise, you will perform a simple training operation in order to test your model.  The testing will take place using the built-in testing panel in the LUIS portal.
+We're now ready to train our model. In this exercise, you will perform a simple training operation in order to test your model. The testing will take place using the built-in testing panel in the LUIS portal.
 
 1. In the top toolbar, select **Train**. During training, LUIS builds a model to map utterances to intents based on the training data you’ve provided.
 
@@ -188,7 +188,7 @@ We're now ready to train our model. In this exercise, you will perform a simple 
     > [!NOTE]
     > An endpoint named **Starter_Key** is automatically created for testing purposes, and you could use that here - however to use the service in a production environment or inside of an application, you will always want to tie it to a real Language Understanding resource created in Azure.
 
-1. You should see a **Prediction Resource** and a **Starter_Key** resource already created.  If you see the **Prediction Resource**, advance to the next section on **Publish the app**.
+1. You should see a **Prediction Resource** and a **Starter_Key** resource already created. If you see the **Prediction Resource**, advance to the next section on **Publish the app**.
 1. If you do not see an existing **Prediction Resource**, select **Add prediction resource**. The **Tenant** will already be selected.
 1. Select your subscription, and the resource you created in the Azure portal earlier and then select **Done** to connect the Language Understanding resource to the LUIS service.
 
