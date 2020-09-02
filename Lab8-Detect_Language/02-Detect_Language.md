@@ -107,7 +107,7 @@ switch (result.DetectedLanguages[0].Name)
 "cogsKey" :  ""
 ```
 
-`` Note: For cogsBaseURL and cogsKey you will get in your azure environment
+`Note: For cogsBaseURL and cogsKey you will get in your azure environment`
 
 14. Press **F5** to start your bot
 
