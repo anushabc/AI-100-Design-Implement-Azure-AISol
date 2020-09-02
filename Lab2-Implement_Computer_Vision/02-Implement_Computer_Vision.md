@@ -54,7 +54,7 @@ Let's talk about how we're going to call Cognitive Services in our application b
 
 ### Image Processing Library
 
-1. From virtual machine, open the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\ImageProcessing.sln** solution
+1. From virtual machine, open the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\ImageProcessing.sln** solution in Visual Studio.
 
 Within your `ImageProcessing` solution you'll find the `ProcessingLibrary` project. It serves as a wrapper around several services. This specific PCL contains some helper classes (in the ServiceHelpers folder) for accessing the Computer Vision API and an "ImageInsights" class to encapsulate the results.
 
