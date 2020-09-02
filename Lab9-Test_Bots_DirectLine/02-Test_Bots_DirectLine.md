@@ -49,7 +49,7 @@ Ensure that you update the **appsettings.json** file with all the necessary valu
 
 5. Select the subscription you have been using
 
-6. Expand the resource group and select the picture bot app service we created in Lab 3
+6. Expand the resource group and select the picture bot app service we created in Lab 1
 
 7. Select **OK**
 
