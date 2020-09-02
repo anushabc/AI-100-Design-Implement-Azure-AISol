@@ -107,6 +107,8 @@ switch (result.DetectedLanguages[0].Name)
 "cogsKey" :  ""
 ```
 
+`` Note: For cogsBaseURL and cogsKey you will get in your azure environment
+
 14. Press **F5** to start your bot
 
 15. Using the Bot Emulator, send in a few phrases and see what happens:
