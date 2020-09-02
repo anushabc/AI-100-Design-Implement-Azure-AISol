@@ -12,7 +12,7 @@ In this lab we are going to integrate language detection ability of cognitive se
 
 ## Lab 3.2: Add language support to your bot
 
-1. If not already open, open your **PictureBot** solution
+1. Please open the **PictureBot** solution from **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab8-Detect_Language\code\Finished\PictureBot.sln**
 
 1. Right-click the project and select **Manage Nuget Packages**
 
