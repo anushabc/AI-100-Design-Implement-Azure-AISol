@@ -6,9 +6,9 @@ In this lab we are going to integrate language detection ability of cognitive se
 
 1. Open the [Azure Portal](https://portal.azure.com)
 
-1. Navigate to your resource group, select the cognitive services resource that is generic (aka, it contains all end points).
+2. Navigate to your resource group, select the cognitive services resource that is generic (aka, it contains all end points).
 
-1. Under **RESOURCE MANAGEMENT**, select the **Quick Start** tab and record the url and the key for the cognitive services resource
+3. Under **RESOURCE MANAGEMENT**, select the **Quick Start** tab and record the url and the key for the cognitive services resource
 
 ## Lab 3.2: Add language support to your bot
 
@@ -16,13 +16,13 @@ In this lab we are going to integrate language detection ability of cognitive se
 
       >**Note:** please make sure we are selecting the solution from the finished folder
 
-1. Right-click the project and select **Manage Nuget Packages**
+2. Right-click the project and select **Manage Nuget Packages**
 
-1. Select **Browse**
+3. Select **Browse**
 
-1. Search for **Microsoft.Azure.CognitiveServices.Language.TextAnalytics**, select it then select **Install**, then select **I Accept**
+4. Search for **Microsoft.Azure.CognitiveServices.Language.TextAnalytics**, select it then select **Install**, then select **I Accept**
 
-1. Open the **Startup.cs** file, Check the following using statements:
+5. Open the **Startup.cs** file, Check the following using statements:
 
 ```csharp
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
@@ -30,7 +30,7 @@ using Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models;
 using Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime;
 ```
 
-1. Check the following code to the **ConfigureServices** method:
+6. Check the following code to the **ConfigureServices** method:
 
 ```csharp
 services.AddSingleton(sp =>
@@ -48,32 +48,32 @@ services.AddSingleton(sp =>
 });
 ```
 
-1. Open the **PictureBot.cs** file, check the following using statements:
+7. Open the **PictureBot.cs** file, check the following using statements:
 
 ```csharp
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics;
 using Microsoft.Azure.CognitiveServices.Language.TextAnalytics.Models;
 ```
 
-1. check the following class variable:
+8. check the following class variable:
 
 ```csharp
 private TextAnalyticsClient _textAnalyticsClient;
 ```
 
-1. Check whether the constructor includes the new TextAnalyticsClient:
+9. Check whether the constructor includes the new TextAnalyticsClient:
 
 ```csharp
 public PictureBot(PictureBotAccessors accessors, ILoggerFactory loggerFactory,LuisRecognizer recognizer, TextAnalyticsClient analyticsClient)
 ```
 
-1. Inside the constructor, check the class variable is initialized:
+10. Inside the constructor, check the class variable is initialized:
 
 ```csharp
 _textAnalyticsClient = analyticsClient;
 ```
 
-1. Navigate to the **OnTurnAsync** method and find the following line of code:
+11. Navigate to the **OnTurnAsync** method and find the following line of code:
 
 ```csharp
 var utterance = turnContext.Activity.Text;
@@ -82,7 +82,7 @@ state.UtteranceList.Add(utterance);
 await _accessors.ConversationState.SaveChangesAsync(turnContext);
 ```
 
-1. Check the following line of code is present after it
+12. Check the following line of code is present after it
 
 ```csharp
 //Check the language
@@ -100,16 +100,16 @@ switch (result.DetectedLanguages[0].Name)
 }
 ```
 
-1. Open the **appsettings.json** file and ensure that your cognitive services settings are entered:
+13. Open the **appsettings.json** file and ensure that your cognitive services settings are entered:
 
 ```csharp
 "cogsBaseUrl": "",
 "cogsKey" :  ""
 ```
 
-1. Press **F5** to start your bot
+14. Press **F5** to start your bot
 
-1. Using the Bot Emulator, send in a few phrases and see what happens:
+15. Using the Bot Emulator, send in a few phrases and see what happens:
 
 - Como Estes?
 - Bon Jour!
