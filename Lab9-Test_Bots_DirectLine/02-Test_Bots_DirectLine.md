@@ -39,7 +39,9 @@ Ensure that you update the **appsettings.json** file with all the necessary valu
 
 ## Lab 4.1: Publish Your Bot
 
-1. Open your **PictureBot** solution
+1. Open your **PictureBot** solution in visual studio 
+
+**Note**: **PictureBot** solution is under C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab9-Test_Bots_DirectLine\code\Finished\PictureBot
 
 2. Right-click the project and select **Publish**
 
