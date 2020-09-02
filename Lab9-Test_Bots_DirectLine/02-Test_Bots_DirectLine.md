@@ -1,4 +1,4 @@
-# Lab 9: Test Bots in DirectLine
+# Lab 4: Test Bots in DirectLine
 
 ## Introduction
 
@@ -10,11 +10,11 @@ Microsoft Bot Framework Direct Line bots are bots that can function with a custo
 
 This hands-on lab introduces key concepts related to Direct Line API.
 
-## Lab 9.0: Prerequisites
+## Lab 4.0: Prerequisites
 
-This lab starts from the assumption that you have built and published the bot from [Lab 3](../Lab3-Basic_Filter_Bot/02-Basic_Filter_Bot.md). It is recommended that you do that lab in order to be successful in the ones that follow. If you have not, reading carefully through all the exercises and looking at some of the code or using it in your own applications may be sufficient, depending on your needs.
+This lab starts from the assumption that you have built and published the bot from Lab 3 Basic Filter Bot. It is recommended that you do that lab in order to be successful in the ones that follow. If you have not, reading carefully through all the exercises and looking at some of the code or using it in your own applications may be sufficient, depending on your needs.
 
-We'll also assume that you've completed [Lab 4](../Lab4-Log_Chat/02-Logging_Chat.md), but you should be able to complete the labs without completing the logging labs.
+We'll also assume that you've completed Lab 4 Log Chat, but you should be able to complete the labs without completing the logging labs.
 
 ### Collecting the Keys
 
@@ -37,7 +37,7 @@ Over the course of the last few labs, we have collected various keys. You will n
 
 Ensure that you update the **appsettings.json** file with all the necessary values.
 
-## Lab 9.1: Publish Your Bot
+## Lab 4.1: Publish Your Bot
 
 1. Open your **PictureBot** solution
 
@@ -55,7 +55,7 @@ Ensure that you update the **appsettings.json** file with all the necessary valu
 
 > **Note** Depending on the path you took to get to this lab, you may need to publish a second time otherwise you may get the echo bot service otherwise when you test below.  Republish the bot, only this time change the publish settings to remove existing files.  
 
-## Lab 9.2: Setting up the Direct Line channel
+## Lab 4.2: Setting up the Direct Line channel
 
 1. In the portal, locate your published PictureBot **web app bot** and navigate to the **Channels** tab.
 
@@ -65,7 +65,7 @@ Ensure that you update the **appsettings.json** file with all the necessary valu
 
 You can read detailed instructions on [enabling the Direct Line channel](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-4.0) and [secrets and tokens](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-authentication?view=azure-bot-service-3.0#secrets-and-tokens).
 
-## Lab 9.3: Create a console application
+## Lab 4.3: Create a console application
 
 We'll create a console application to help us understand how Direct Line can allow us to connect directly to a bot. The console client application we will create operates in two threads. The primary thread accepts user input and sends messages to the bot. The secondary thread polls the bot once per second to retrieve any messages from the bot, then displays the messages received.
 
@@ -278,7 +278,7 @@ Spend some time reviewing this sample code. It's a good exercise to make sure yo
 
 Quick quiz - how are we displaying the Conversation ID? We'll see in the next sections why we might want this.
 
-## Lab 9.4: Using HTTP Get to retrieve messages
+## Lab 4.4: Using HTTP Get to retrieve messages
 
 Because we have the conversation ID, we can retrieve user and bot messages using HTTP Get. If you are familiar and experienced with Rest Clients, feel free to use your tool of choice.
 

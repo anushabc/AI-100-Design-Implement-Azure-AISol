@@ -1,4 +1,4 @@
-# Lab 7: Integrate LUIS into Bot Dialogs
+# Lab 2: Integrate LUIS into Bot Dialogs
 
 ## Introduction
 
@@ -6,17 +6,15 @@ Our bot is now capable of taking in a user's input and responding based on the u
 
 We will have to update our bot in order to use LUIS.  We can do this by modifying "Startup.cs" and "PictureBot.cs."
 
-> Prerequisites: This lab builds on [Lab 3](../Lab3-Basic_Filter_Bot/02-Basic_Filter_Bot.md). It is recommended that you do that lab in order to be able to implement logging as covered in this lab. If you have not, reading carefully through all the exercises and looking at some of the code or using it in your own applications may be sufficient, depending on your needs.
-
 > NOTE: If you intend to use the code in the Finished folder, you MUST replace the app specific information with your own app IDs and endpoints.
 
-## Lab 7.1: Adding natural language understanding
+## Lab 2.1: Adding natural language understanding
 
 ### Adding LUIS to Startup.cs
 
 1. If not already open, open your **PictureBot** solution in Visual Studio
 
-> **NOTE** You can also start with the **{GitHubPath}/Lab7-Integrate_LUIS/code/Starter/PictureBot/PictureBot.sln** solution if you did not start from Lab 1.
+> **NOTE** You can also start with the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master}/Lab7-Integrate_LUIS/code/Starter/PictureBot/PictureBot.sln** solution if you did not start from Lab 1.
 > Be sure to replace all the app settings values
 
 1. Open **Startup.cs** and locate the `ConfigureServices` method. We'll add LUIS here by adding an additional service for LUIS after creating and registering the state accessors.
@@ -68,7 +66,7 @@ services.AddSingleton(sp =>
 
 > **Note** The Luis endpoint url for the .NET SDK should be something like **https://{region}.api.cognitive.microsoft.com** with no api or version after it.
 
-## Lab 7.2: Adding LUIS to PictureBot's MainDialog
+## Lab 2.2: Adding LUIS to PictureBot's MainDialog
 
 1. Open **PictureBot.cs.**. The first thing you'll need to do is initialize the LUIS recognizer, similar to how you did for `PictureBotAccessors`. Below the commented line `// Initialize LUIS Recognizer`, add the following:
 
@@ -158,7 +156,7 @@ Let's briefly go through what we're doing in the new code additions. First, inst
 
 Another thing to note is that after every response that called LUIS, we're adding the LUIS intent value and score. The reason is just to show you when LUIS is being called as opposed to Regex (you would remove these responses from the final product, but it's a good indicator for us as we test the bot).
 
-## Lab 7.3: Testing natural speech phrases
+## Lab 2.3: Testing natural speech phrases
 
 1. Press **F5** to run the app.
 
@@ -177,7 +175,3 @@ If you're having trouble customizing your LUIS implementation, review the docume
 ## **Extra Credit**
 
 If you wish to attempt to integrate LUIS bot including Azure Cognitive Search, building on the prior supplementary LUIS model-with-search [training] (https://github.com/Azure/LearnAI-Bootcamp/tree/master/lab01.5-luis), follow the following trainings: [Azure Cognitive Search](https://github.com/Azure/LearnAI-Bootcamp/tree/master/lab02.1-azure_search), and [Azure Cognitive Search Bots](https://github.com/Azure/LearnAI-Bootcamp/blob/master/lab02.2-building_bots/2_Azure_Search.md).
-
-## Next Steps
-
-- [Lab 08-01: Detect Language](../Lab8-Detect_Language/01-Introduction.md)

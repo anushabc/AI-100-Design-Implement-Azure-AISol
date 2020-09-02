@@ -1,8 +1,8 @@
-# Lab 8 - Detect Language
+# Lab 3 - Detect Language
 
 In this lab we are going to integrate language detection ability of cognitive services into our bot.
 
-## Lab 8.1: Retrieve your Cognitive Services url and keys
+## Lab 3.1: Retrieve your Cognitive Services url and keys
 
 1. Open the [Azure Portal](https://portal.azure.com)
 
@@ -10,9 +10,9 @@ In this lab we are going to integrate language detection ability of cognitive se
 
 1. Under **RESOURCE MANAGEMENT**, select the **Quick Start** tab and record the url and the key for the cognitive services resource
 
-## Lab 8.2: Add language support to your bot
+## Lab 3.2: Add language support to your bot
 
-1. If not already open, open your **PictureBot** solution
+1. Please open the **PictureBot** solution from **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab8-Detect_Language\code\Finished\PictureBot.sln**
 
 1. Right-click the project and select **Manage Nuget Packages**
 
@@ -124,7 +124,3 @@ Since we have already introduced you to LUIS in previous labs, think about what 
 
 - [Example: Detect language with Text Analytics](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-language-detection)
 - [Quickstart: Text analytics client library for .NET](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/quickstarts/csharp)
-
-## Next Steps
-
-- [Lab 09-01: Test Bot DirectLine](../Lab9-Test_Bots_DirectLine/01-Introduction.md)
