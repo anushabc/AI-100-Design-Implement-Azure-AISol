@@ -109,7 +109,15 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. If you are not prompted then you will need to manually rename the class and then change all references to the class to **PictureBot**.  You will know if you missed one when you attempt to build the project.
 
-1. Open Startup.cs file and  make sure that **using PictureBot.Bots;** is inside the namespace **PictureBot** and outside the class Startup.      
+1. Open Startup.cs file and  make sure that **using PictureBot.Bots;** is inside the namespace **PictureBot** and outside the class Startup. 
+
+   ```csharp
+      namespace PictureBot
+             {
+                 using PictureBot.Bots;
+                 public class Startup
+                    {
+   ```
 
 1. Right-click the project, select **Manage Nuget Packagaes**
 
@@ -203,6 +211,7 @@ For example, if I say "Hello bot" and the bot responds "Hi, how are you?" that i
       using Microsoft.Extensions.Options;
       using Microsoft.Extensions.Logging;
       using Microsoft.PictureBot;
+      using PictureBot.Bots;
 
       using Microsoft.Bot.Builder.AI.Luis;
       using Microsoft.Bot.Builder.Dialogs;
@@ -210,7 +219,7 @@ For example, if I say "Hello bot" and the bot responds "Hi, how are you?" that i
 
    We won't use all of the above namespaces just yet, but can you guess when we might?
    
-1. Make sure that **using PictureBot.Bots;** is outside the namespace **PictureBot**.      
+1. Remove the line **using PictureBot.Bots;** from the namespace **PictureBot**.      
 
 1. In the **Startup.cs** class, focus your attention on the `ConfigureServices` method which is used to add services to the bot. Review the contents carefully, noting what is built in for you.
 
@@ -231,20 +240,20 @@ Middleware is simply a class or set of classes that sit between the adapter and 
 
 The SDK allows you to write your own middleware or add reusable components of middleware created by others. Every activity coming in or out of your bot flows through your middleware. We'll get deeper into this later in the lab, but for now, it's important to understand that every activity flows through your middleware, because it is located in the `ConfigureServices` method that gets called at run time (which runs in between every message being sent by a user and `OnMessageActivityAsync`).
 
-1. Add a new folder called **Middleware**
+5. Add a new folder called **Middleware**
 
-1. Right-click on the **Middleware** folder and select **Add>Existing Item**.
+6. Right-click on the **Middleware** folder and select **Add>Existing Item**.
 
-1. Navigate to **{GitHubDir}\Lab3-Basic_Filter_Bot\code\Middleware**, select all three files, and select **Add**
+7. Navigate to **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab3-Basic_Filter_Bot\code\Middleware **, select all three files, and select **Add**
 
-1. Add the following variables to your **Startup** class:
+8. Add the following variables to your **Startup** class:
 
    ```csharp
       private ILoggerFactory _loggerFactory;
       private bool _isProduction = false;
    ```
 
-1. Replace the following code in the **ConfigureServices** method:
+9. Replace the following code in the **ConfigureServices** method:
 
    ```csharp
       services.AddTransient<IBot, PictureBot.Bots.PictureBot>();
@@ -304,7 +313,7 @@ services.AddBot<PictureBot.Bots.PictureBot>(options =>
 });
 ```
 
-6. Replace the **Configure** method with the following code:
+10. Replace the **Configure** method with the following code:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
@@ -327,18 +336,18 @@ In the SDK, an accessor implements the `IStatePropertyAccessor` interface, which
 
 For each accessor we create, we have to first give it a property name. For our scenario, we want to keep track of a few things:
 
-1. `PictureState`
+   `PictureState`
     * Have we greeted the user yet?
         * We don't want to greet them more than once, but we want to make sure we greet them at the beginning of a conversation.
     * Is the user currently searching for a specific term? If so, what is it?
         * We need to keep track of if the user has told us what they want to search for, and what it is they want to search for if they have.
-2. `DialogState`
+   `DialogState`
     * Is the user currently in the middle of a dialog?
         * This is what we'll use to determine where a user is in a given dialog or conversation flow. If you aren't familiar with dialogs, don't worry, we'll get to that soon.
 
 We can use these constructs to keep track of what we'll call `PictureState`.
 
-1. In the **ConfigureServices** method of the **Startup.cs** file, add the `PictureState` within the list of custom state accessors and to keep track of the dialogs, you'll use the built-in `DialogState`:
+11. In the **ConfigureServices** method of the **Startup.cs** file, add the `PictureState` within the list of custom state accessors and to keep track of the dialogs, you'll use the built-in `DialogState`:
 
 ```csharp
 // Create and register state accesssors.
@@ -378,9 +387,9 @@ You should see an error (red squiggly) beneath some of the terms. But before fix
 
 Now back to the errors you're seeing. You've said you're going to store this information, but you haven't yet specified where or how. We have to update "PictureState.cs" and "PictureBotAccessor.cs" to have and access the information we want to store.
 
-1. Right-click the project and select **Add->Class**, select a Class file and name it **PictureState**
+12. Right-click the project and select **Add->Class**, select a Class file and name it **PictureState**
 
-1. Copy the following code into **PictureState.cs**.
+13. Copy the following code into **PictureState.cs**.
 
 ```csharp
 using System.Collections.Generic;
@@ -405,11 +414,11 @@ namespace Microsoft.PictureBot
 }
 ```
 
-1. Review the code.  This is where we'll store information about the active conversation.  Feel free to add some comments explaining the purposes of the strings. Now that you have PictureState appropriately initialized, you can create the PictureBotAccessor, to remove the errors you were getting in **Startup.cs**.
+14. Review the code.  This is where we'll store information about the active conversation.  Feel free to add some comments explaining the purposes of the strings. Now that you have PictureState appropriately initialized, you can create the PictureBotAccessor, to remove the errors you were getting in **Startup.cs**.
 
-1. Right-click the project and select **Add->Class**, select a Class file and name it **PictureBotAccessors**
+15. Right-click the project and select **Add->Class**, select a Class file and name it **PictureBotAccessors**
 
-1. Copy the following into it:
+16. Copy the following into it:
 
 ```csharp
 using System;
@@ -466,9 +475,9 @@ namespace Microsoft.PictureBot
 }
 ```
 
-1. Review the code, notice the implementation of `PictureStateName` and `PictureState`.
+17. Review the code, notice the implementation of `PictureStateName` and `PictureState`.
 
-1. Wondering if you configured it correctly? Return to **Startup.cs** and confirm your errors around creating the custom state accessors have been resolved.
+18. Wondering if you configured it correctly? Return to **Startup.cs** and confirm your errors around creating the custom state accessors have been resolved.
 
 ## Lab 1.3: Organizing code for bots
 
@@ -496,7 +505,7 @@ For the purposes of this lab, we are going to keep things fairly simple, but aft
 
 Since we only have two dialogs, we can keep it simple and put them in the PictureBot class. However, complex scenarios may require splitting them out into different dialogs in a folder (similar to how we'll separate Responses and Models).
 
-1. Navigate back to **PictureBot.cs** and replace your `using` statements with the following:
+2. Navigate back to **PictureBot.cs** and replace your `using` statements with the following:
 
 ```csharp
 using System.Threading;
@@ -521,7 +530,7 @@ You've just added access to your Models/Responses, as well as to the services LU
 
 Next, we'll need to override the `OnTurnAsync` method with one that processes incoming messages and then routes them through the various dialogs.
 
-1. Replace the **PictureBot** class with the following:
+3. Replace the **PictureBot** class with the following:
 
 ```csharp
 /// <summary>
@@ -636,9 +645,9 @@ We'll add some more to this in a bit. You can ignore any errors for now.
 
 So before we fill out our dialogs, we need to have some responses ready. Remember, we're going to keep dialogs and responses separate, because it results in cleaner code, and an easier way to follow the logic of the dialogs. If you don't agree or understand now, you will soon.
 
-1. In the **Responses** folder, create two classes, called **MainResponses.cs** and **SearchResponses.cs**. As you may have figured out, the Responses files will simply contain the different outputs we may want to send to users, no logic.
+4. In the **Responses** folder, create two classes, called **MainResponses.cs** and **SearchResponses.cs**. As you may have figured out, the Responses files will simply contain the different outputs we may want to send to users, no logic.
 
-1. Within **MainResponses.cs** replace the code with the following:
+5. Within **MainResponses.cs** replace the code with the following:
 
 ```csharp
 using System.Threading.Tasks;
@@ -683,7 +692,7 @@ namespace PictureBot.Responses
 
 Note that there are two responses with no values (ReplyWithGreeting and ReplyWithConfused). Fill these in as you see fit.
 
-1. Within "SearchResponses.cs" replace the code with the following:
+6. Within "SearchResponses.cs" replace the code with the following:
 
 ```csharp
 using Microsoft.Bot.Builder;
@@ -712,15 +721,15 @@ namespace PictureBot.Responses
 }
 ```
 
-1. Notice a whole task is missing. Fill in as you see fit, but make sure the new task has the name "ReplyWithSearchRequest", or you may have issues later.
+7. Notice a whole task is missing. Fill in as you see fit, but make sure the new task has the name "ReplyWithSearchRequest", or you may have issues later.
 
 #### Models
 
 Due to time limitations, we will not be walking through creating all the models. They are straightforward, but we recommend taking some time to review the code within after you've added them. 
 
-1. Right-click on the **Models** folder and select **Add>Existing Item**.
+8. Right-click on the **Models** folder and select **Add>Existing Item**.
 
-1. Navigate to **{GitHubDir}\Lab3-Basic_Filter_Bot\code\Models**, select all three files, and select **Add**.
+9. Navigate to **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab3-Basic_Filter_Bot\code\Models**, select all three files, and select **Add**.
 
 ## Lab 1.4: Regex and Middleware
 
@@ -749,11 +758,11 @@ middleware.Add(new RegExpRecognizerMiddleware()
 
 ```
 
-> We're really just skimming the surface of using regular expressions. If you're interested, you can [learn more here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
+   > We're really just skimming the surface of using regular expressions. If you're interested, you can [learn more here](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
-1. You may notice that the `options.State` has been deprecated.  Let's migrate to the newest method:
+2. You may notice that the `options.State` has been deprecated.  Let's migrate to the newest method:
 
-1. Remove the following code:
+3. Remove the following code:
 
 ```csharp
 var conversationState = new ConversationState(dataStore);
@@ -761,7 +770,7 @@ var conversationState = new ConversationState(dataStore);
 options.State.Add(conversationState);
 ```
 
-1. Replace it with
+4. Replace it with
 
 ```csharp
 var userState = new UserState(dataStore);
@@ -774,7 +783,7 @@ services.AddSingleton<UserState>(userState);
 services.AddSingleton<ConversationState>(conversationState);
 ```
 
-1. Also replace the `ConfigureServices` code to now pull from the dependency injection version:
+5. Also replace the `ConfigureServices` code to now pull from the dependency injection version:
 
 ```csharp
 var conversationState = options.State.OfType<ConversationState>().FirstOrDefault();
@@ -784,7 +793,7 @@ if (conversationState == null)
 }
 ```
 
-1. Replace it with
+6. Replace it with
 
 ```csharp
 var conversationState = services.BuildServiceProvider().GetService<ConversationState>();
@@ -793,6 +802,11 @@ if (conversationState == null)
 {
     throw new InvalidOperationException("ConversationState must be defined and added before adding conversation-scoped state accessors.");
 }
+```
+7.  Add the following line of code within `ConfigureServices` method.
+
+```
+services.AddMvc(option => option.EnableEndpointRouting = false);
 ```
 
 Without adding LUIS, our bot is really only going to pick up on a few variations, but it should capture a good bit of messages, if the users are using the bot for searching and sharing and ordering pictures.
@@ -877,18 +891,18 @@ public async Task<DialogTurnResult> MainMenuAsync(WaterfallStepContext stepConte
 }
 ```
 
-1. Press **F5** to run the bot.
+2. Press **F5** to run the bot.
 
-1. Using the bot emulator, test the bot by sending some commands:
+3. Using the bot emulator, test the bot by sending some commands:
 
-* help
-* share pics
-* order pics
-* search pics
+    * help
+    * share pics
+    * order pics
+    * search pics
   
-> **Note** If you get a 500 error in your bot, you can place a break point in the **Startup.cs** file inside the **OnTurnError** delegate method.  The most common error is a mismatch of the AppId and AppSecret.
+     > **Note** If you get a 500 error in your bot, you can place a break point in the **Startup.cs** file inside the **OnTurnError** delegate method.  The most common error is a mismatch of the AppId and AppSecret.
 
-1. If the only thing that didn't give you the expected result was "search pics", everything is working how you configured it. "search pics" failing is the expected behavior at this point in the lab, but why? Have an answer before you move on!
+4. If the only thing that didn't give you the expected result was "search pics", everything is working how you configured it. "search pics" failing is the expected behavior at this point in the lab, but why? Have an answer before you move on!
 
 >Hint: Use break points to trace matching to case "search", starting from **PictureBot.cs**.
 >Get stuck or broken? You can find the solution for the lab up until this point under [resources/code/Finished](./code/Finished). The readme file within the solution (once you open it) will tell you what keys you need to add in order to run the solution. We recommend using this as a reference, not as a solution to run, but if you choose to run it, be sure to add the necessary keys for your enviroment.
