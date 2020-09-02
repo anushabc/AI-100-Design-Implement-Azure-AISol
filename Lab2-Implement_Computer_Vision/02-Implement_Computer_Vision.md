@@ -80,7 +80,7 @@ Now let's take a step back for a minute. It isn't quite as simple as creating th
 
 1. Navigate to **ImageProcessor.cs** within `ProcessingLibrary`.
 
-1. Note the following [`using` directives](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) **to the top** of the class, above the namespace:
+2. Note the following [`using` directives](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) **to the top** of the class, above the namespace:
 
 ```csharp
 using System;
@@ -93,7 +93,7 @@ using ServiceHelpers;
 
 [Project Oxford](https://blogs.technet.microsoft.com/machinelearning/tag/project-oxford/) was the project where many Cognitive Services got their start. As you can see, the NuGet Packages were even labeled under Project Oxford. In this scenario, we'll call `Microsoft.ProjectOxford.Vision` for the Computer Vision API. Additionally, we'll reference our service helpers (remember, these will make our lives easier). You'll have to reference different packages depending on which Cognitive Services you're leveraging in your application.
 
-1. In **ImageProcessor.cs** we start by utliziling a method to process the image, `ProcessImageAsync`. The code will utilize asynchronous processing because it will utilize services to perform the actions.
+3. In **ImageProcessor.cs** we start by utliziling a method to process the image, `ProcessImageAsync`. The code will utilize asynchronous processing because it will utilize services to perform the actions.
 
 ```csharp
 public static async Task<ImageInsights> ProcessImageAsync(Func<Task<Stream>> imageStreamCallback, string imageId)
@@ -121,9 +121,9 @@ In the above code, we use `Func<Task<Stream>>` because we want to make sure we c
 
 In `ImageProcessor.cs`, within the `ProcessImageAsync` method, we set up a [static array](https://stackoverflow.com/questions/4594850/definition-of-static-arrays) that we'll fill in throughout the processor. As you can see, these are the main attributes we want to call for `ImageInsights.cs`.
 
-1. Next, we want to call the Cognitive Service (specifically Computer Vision) and put the results in `imageAnalysisResult`.
+4. Next, we want to call the Cognitive Service (specifically Computer Vision) and put the results in `imageAnalysisResult`.
 
-1. We use the code below to call the Computer Vision API (with the help of `VisionServiceHelper.cs`) and store the results in `imageAnalysisResult`. Near the bottom of `VisionServiceHelper.cs`, you will want to review the available methods for you to call (`RunTaskWithAutoRetryOnQuotaLimitExceededError`, `DescribeAsync`, `AnalyzeImageAsync`, `RecognizeTextAsyncYou`). You will use the AnalyzeImageAsync method in order to return the visual features.
+5. We use the code below to call the Computer Vision API (with the help of `VisionServiceHelper.cs`) and store the results in `imageAnalysisResult`. Near the bottom of `VisionServiceHelper.cs`, you will want to review the available methods for you to call (`RunTaskWithAutoRetryOnQuotaLimitExceededError`, `DescribeAsync`, `AnalyzeImageAsync`, `RecognizeTextAsyncYou`). You will use the AnalyzeImageAsync method in order to return the visual features.
 
 ```csharp
 var imageAnalysisResult = await VisionServiceHelper.AnalyzeImageAsync(imageStreamCallback, DefaultVisualFeaturesList);
@@ -131,7 +131,7 @@ var imageAnalysisResult = await VisionServiceHelper.AnalyzeImageAsync(imageStrea
 
 Now that we've called the Computer Vision service, we want to create an entry in "ImageInsights" with only the following results: ImageId, Caption, and Tags (you can confirm this by revisiting `ImageInsights.cs`).
 
-1. The following code below accomplishes this.
+6. The following code below accomplishes this.
 
 ```csharp
 ImageInsights result = new ImageInsights
@@ -144,15 +144,15 @@ ImageInsights result = new ImageInsights
 
 So now we have the caption and tags that we need from the Computer Vision API, and each image's result (with imageId) is stored in "ImageInsights".
 
-1. Lastly, we need to close out the method by using the following line at the end of the method:
+7. Lastly, we need to close out the method by using the following line at the end of the method:
 
 ```csharp
 return result;
 ```
 
-1. In order to use this application, we need to build the project, press **Ctrl-Shift-B**, of select the **Build** menu and choose **Build Solution**.
+8. In order to use this application, we need to build the project, press **Ctrl-Shift-B**, of select the **Build** menu and choose **Build Solution**.
 
-1. Work with your instructor to fix any errors.
+9. Work with your instructor to fix any errors.
 
 ### Exploring Cosmos DB	
 
