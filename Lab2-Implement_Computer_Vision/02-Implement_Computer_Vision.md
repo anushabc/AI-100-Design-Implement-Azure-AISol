@@ -170,16 +170,16 @@ Cosmos DB is not a focus of this lab, but if you're interested in what's going o
 
 We will implement the main processing and storage code as a command-line/console application because this allows you to concentrate on the processing code without having to worry about event loops, forms, or any other UX related distractions. Feel free to add your own UX later.	
 1. In the **TestCLI** project, open the **settings.json** file	
-1. Get your specific environment settings from azure portal for example azure cosmosdb endpoint and primary key for EndpointURI and Key, same for azure storage and cognitive service.
+2. Get your specific environment settings from azure portal for example azure cosmosdb endpoint and primary key for EndpointURI and Key, same for azure storage and cognitive service.
 
 > **Note** the url for cognitive services should end with **/vision/v1.0** for the project oxford apis.  For example `https://westus2.api.cognitive.microsoft.com/vision/v1.0`.	
 
-1. If you have not already done so, compile the project	
-1. Open a command prompt and navigate to the build directory for the **TestCLI** project.  It should something like **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\TestCLI1**.
+3. If you have not already done so, compile the project	
+4. Open a command prompt and navigate to the build directory for the **TestCLI** project.  It should something like **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\TestCLI1**.
 
 > **NOTE** Do not navigate to the debug directory	
 > **NOTE** .net core 2.2 is requred installation can be find here https://dotnet.microsoft.com/download/dotnet-core/2.2 
-1. Run command **dotnet run**	
+5. Run command **dotnet run**	
 ```cmd	
 Usage:  [options]	
 Options:	
