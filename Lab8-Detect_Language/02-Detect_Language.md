@@ -14,7 +14,7 @@ In this lab we are going to integrate language detection ability of cognitive se
 
 1. Please open the **PictureBot** solution from **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab8-Detect_Language\code\Finished\PictureBot.sln**
 
-```please make sure we are selecting the solution from the finished folder```
+       ```please make sure we are selecting the solution from the finished folder```
 
 1. Right-click the project and select **Manage Nuget Packages**
 
