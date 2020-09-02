@@ -162,10 +162,10 @@ Another thing to note is that after every response that called LUIS, we're addin
 
 Select the Browse tab, and install the following packages, ensure that you are using version 4.6.3:
 
-Microsoft.Bot.Builder.Azure
-Microsoft.Bot.Builder.AI.Luis
-Microsoft.Bot.Builder.Dialogs
-Microsoft.Azure.Search (version, 10.1.0 or later)
+-Microsoft.Bot.Builder.Azure
+-Microsoft.Bot.Builder.AI.Luis
+-Microsoft.Bot.Builder.Dialogs
+-Microsoft.Azure.Search (version, 10.1.0 or later)
 
 2. Press **F5** to run the app.
 
