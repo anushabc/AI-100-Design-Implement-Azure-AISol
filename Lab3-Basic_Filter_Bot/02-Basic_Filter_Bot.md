@@ -21,6 +21,8 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. In the portal, navigate to your resource group, then select **+Add** and search for **bot**.
 
+   <img src="images/rg.jpg"/><br/>
+
 1. Select **Web App Bot**, and select **Create**.
 
 1. For the name, you'll have to create a unique identifier. We recommend using something along the lines of PictureBot[i][n] where [i] is your initials and [n] is a number (e.g. mine would be PictureBotamt6).
