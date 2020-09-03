@@ -36,7 +36,7 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 ## Lab 1.2: Create a KnowledgeBase
 
-1. Open the **https://qnamaker.ai**
+1. Open the ```https://www.qnamaker.ai/```
 
 1. In the top right, select **Sign in**.  Login using the Azure credentials for your new QnA Maker resource
 
