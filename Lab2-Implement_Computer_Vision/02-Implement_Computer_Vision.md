@@ -200,7 +200,7 @@ We will implement the main processing and storage code as a command-line/console
   
 4. To get the necessary items,navigate to your azure portal using the azure credentials from environment details tab. Then find the respective ones as shown in the below images:-
 
-4.1)To get the cognitive services details, navigate to **cogscompvis** from your resource group and get the keys and endpoint as shown below :-
+4.1)To get the cognitive services details, navigate to **cogscompvis** from resource group **ai-100-{uniqueid}** and get the keys and endpoint as shown below :-
 
   ![](media/cog-comp-vision.jpg)
   
