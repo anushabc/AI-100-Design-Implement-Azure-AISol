@@ -86,6 +86,8 @@ You can find additional service helpers for some of the other Cognitive Services
 
 1. In the **ProcessingLibrary** project, navigate to the **ImageInsights.cs** file.
 
+  ![](media/image-insights.jpg)
+
 You can see that there are properties for `Caption` and `Tags` from the images, as well as a unique `ImageId`. "ImageInsights" collects  the information from the Computer Vision API.
 
 Now let's take a step back for a minute. It isn't quite as simple as creating the "ImageInsights" class and copying over some methods/error handling from service helpers. We still have to call the API and process the images somewhere. For the purpose of this lab, we are going to walk through `ImageProcessor.cs`to understand how it is being used. In future projects, feel free to add this class to your PCL and start from there (it will need modification depending what Cognitive Services you are calling and what you are processing - images, text, voice, etc.).
