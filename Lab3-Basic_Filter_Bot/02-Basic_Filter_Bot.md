@@ -79,7 +79,7 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
   ![](../images/sign-in-prompt.jpg)
   
-  
+  ![](../images/env-details.jpg)
 
 1. Select **Create new project**, search for **bot**.
 
