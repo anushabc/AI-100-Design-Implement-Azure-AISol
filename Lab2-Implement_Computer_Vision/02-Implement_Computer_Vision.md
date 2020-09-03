@@ -26,6 +26,8 @@ In the continuation of this lab throughout the course, we'll show you how to que
 
 There are some directories under the `C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision` folder in your virtual machine:
 
+  ![](media/filepath.jpg)
+  
 - **sample_images**: Some sample images to use in testing your implementation of Cognitive Services.
 
 - **code**: In here, there are two directories. Each folder contains a solution (.sln) that has several different projects for the lab.
