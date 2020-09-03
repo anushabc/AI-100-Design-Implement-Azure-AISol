@@ -64,9 +64,11 @@ Let's talk about how we're going to call Cognitive Services in our application b
 
   ![](media/select-visual-studio.jpg)
   
- 3. When prompted to sign-in please press sign-in and enter your respective azure credentials from the lab environment details tab:
+ 3. When prompted to sign-in, please press sign-in and enter your respective azure credentials from the lab environment details tab and after signed-in, close the sign-in prompt tab:
  
- 
+  ![](media/sign-in-prompt.jpg) 
+  
+  ![](media/env-details.jpg)
 
 Within your `ImageProcessing` solution you'll find the `ProcessingLibrary` project. It serves as a wrapper around several services. This specific PCL contains some helper classes (in the ServiceHelpers folder) for accessing the Computer Vision API and an "ImageInsights" class to encapsulate the results.
 
