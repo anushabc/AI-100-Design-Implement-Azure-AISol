@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Our bot is now capable of taking in a user's input and responding based on the user's input. Unfortunately, our bot's communication skills are brittle. One typo, or a rephrasing of words, and the bot will not understand. This can cause frustration for the user. We can greatly increase the bot's conversational abilities by enabling it to understand natural language with the LUIS model we built in [Lab 6](../Lab6-Implement_LUIS/02-Implement_LUIS.md)"
+Our bot is now capable of taking in a user's input and responding based on the user's input. Unfortunately, our bot's communication skills are brittle. One typo, or a rephrasing of words, and the bot will not understand. This can cause frustration for the user. We can greatly increase the bot's conversational abilities by enabling it to understand natural language with the LUIS model we built in the previous lab.
 
 We will have to update our bot in order to use LUIS.  We can do this by modifying "Startup.cs" and "PictureBot.cs."
 
@@ -22,7 +22,7 @@ We will have to update our bot in order to use LUIS.  We can do this by modifyin
 Below:
 
 ```csharp
-services.AddSingleton((Func<IServiceProvider, PictureBotAccessors>)(sp =>
+services.AddSingleton<PictureBotAccessors>(sp =>
 {
     .
     .
@@ -55,8 +55,15 @@ services.AddSingleton(sp =>
     return recognizer;
 });
 ```
+3. From the Luisapp dashboard, select the **Luis app** which we created in the previous lab and click on **Manage** in the top toolbar.
 
-3. Modify the **appsettings.json** to include the following properties, be sure to fill them in with your LUIS instance values:
+4. Select **Settings** from the left hand side menu and copy the **App ID** value to notepad.
+
+5. From Azure portal, navigate to resource group and select the cognitive service named **luisbot{deployment-id}**
+
+6. Select **Keys and Endpoint** from the left hand side menu which is under **Resource Management** and copy the values of **Key1** and **Endpoint** into notepad
+
+7. Open Visual studio and modify the **appsettings.json** to include the following properties, be sure to fill them with the values we copied earlier in the previous steps:
 
 ```json
 "luisAppId": "",
@@ -64,11 +71,11 @@ services.AddSingleton(sp =>
 "luisEndPoint": ""
 ```
 
-> **Note** The Luis endpoint url for the .NET SDK should be something like **https://{region}.api.cognitive.microsoft.com** with no api or version after it.
+   > **Note** The Luis endpoint url for the .NET SDK should be something like **https://{region}.api.cognitive.microsoft.com** with no api or version after it.
 
 ## Lab 2.2: Adding LUIS to PictureBot's MainDialog
 
-1. Open **PictureBot.cs.**. The first thing you'll need to do is initialize the LUIS recognizer, similar to how you did for `PictureBotAccessors`. Below the commented line `// Initialize LUIS Recognizer`, add the following:
+1. Open **PictureBot.cs.**. The first thing you'll need to do is initialize the LUIS recognizer. Below the commented line `// Initialize LUIS Recognizer`, add the following:
 
 ```csharp
 private LuisRecognizer _recognizer { get; } = null;
@@ -152,7 +159,7 @@ default:
 
 Let's briefly go through what we're doing in the new code additions. First, instead of responding saying we don't understand, we're going to call LUIS. So we call LUIS using the LUIS Recognizer, and we store the Top Intent in a variable. We then use `switch` to respond in different ways, depending on which intent is picked up. This is almost identical to what we did with Regex.
 
-> **Note** If you named your intents differently in LUIS than instructed in the code accompanying [Lab 6](../Lab6-Implement_LUIS/02-Implement_LUIS.md), you need to modify the `case` statements accordingly.
+> **Note** If you named your intents differently in LUIS than instructed in the previous lab, you need to modify the `case` statements accordingly.
 
 Another thing to note is that after every response that called LUIS, we're adding the LUIS intent value and score. The reason is just to show you when LUIS is being called as opposed to Regex (you would remove these responses from the final product, but it's a good indicator for us as we test the bot).
 
@@ -160,12 +167,12 @@ Another thing to note is that after every response that called LUIS, we're addin
 
 1.Right-click the project, select **Manage Nuget Packagaes** in VSTS
 
-Select the Browse tab, and install the following packages, ensure that you are using version 4.6.3:
+  Select the Browse tab, and install the following packages, ensure that you are using version 4.6.3:
 
-Microsoft.Bot.Builder.Azure
-Microsoft.Bot.Builder.AI.Luis
-Microsoft.Bot.Builder.Dialogs
-Microsoft.Azure.Search (version, 10.1.0 or later)
+   * Microsoft.Bot.Builder.Azure
+   * Microsoft.Bot.Builder.AI.Luis
+   * Microsoft.Bot.Builder.Dialogs
+   * Microsoft.Azure.Search (version, 10.1.0 or later)
 
 2. Press **F5** to run the app.
 
