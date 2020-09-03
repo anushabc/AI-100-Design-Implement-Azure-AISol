@@ -219,7 +219,8 @@ We will implement the main processing and storage code as a command-line/console
 > **NOTE** Do not navigate to the debug directory	
 > **NOTE** .net core 2.2 is requred installation can be find here https://dotnet.microsoft.com/download/dotnet-core/2.2 
 
-7. Run command **dotnet run**	
+7. Run command **dotnet run**
+
 ```cmd	
 Usage:  [options]	
 Options:	
@@ -230,7 +231,9 @@ Options:
 -? | -h | --help  Show help information	
 ```
 
+
  ![](media/command-promt-1.jpg)
+ 
  
 By default, it will load your settings from `settings.json` (it builds it into the `.exe`), but you can provide your own using the `-settings` flag. To load images (and their metadata from Cognitive Services) into your cloud storage, you can just tell _TestCLI_ to `-process` your image directory as follows:
 
