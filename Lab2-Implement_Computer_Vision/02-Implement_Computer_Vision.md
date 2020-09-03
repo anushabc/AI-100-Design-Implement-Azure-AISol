@@ -232,15 +232,19 @@ Options:
 
  ![](media/command-promt-1.jpg)
  
-By default, it will load your settings from `settings.json` (it builds it into the `.exe`), but you can provide your own using the `-settings` flag. To load images (and their metadata from Cognitive Services) into your cloud storage, you can just tell _TestCLI_ to `-process` your image directory as follows:	
+By default, it will load your settings from `settings.json` (it builds it into the `.exe`), but you can provide your own using the `-settings` flag. To load images (and their metadata from Cognitive Services) into your cloud storage, you can just tell _TestCLI_ to `-process` your image directory as follows:
+
+
 ```cmd	
 dotnet run -- -process C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\sample_images	
-```	
-> **Note** Replace the <%GitHubDir%> value with the folder where you cloned the repository.	
+```
+
 Once it's done processing, you can query against your Cosmos DB directly using _TestCLI_ as follows:	
+
 ```cmd	
 dotnet run -- -query "select * from images"	
-```	
+```
+
 Take some time to look through the sample images (you can find them in /sample_images) and compare the images to the results in your application.	
 > **Note** You can also browse the results in the CosmosDb resource in Azure.  Open the resource, then select **Data Explorer**.  Expand the **metadata** database, then select the **items** node.  You will see several json documents that contains your results.
 
