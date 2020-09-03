@@ -250,6 +250,7 @@ Once it's done processing, you can query against your Cosmos DB directly using _
 dotnet run -- -query "select * from images"	
 ```
 
+  ![](media/command-prompt-2.jpg)
 Take some time to look through the sample images (you can find them in /sample_images) and compare the images to the results in your application.	
 > **Note** You can also browse the results in the CosmosDb resource in Azure.  Open the resource, then select **Data Explorer**.  Expand the **metadata** database, then select the **items** node.  You will see several json documents that contains your results.
 
