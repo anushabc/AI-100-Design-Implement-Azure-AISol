@@ -37,15 +37,15 @@ We will have to update our bot in order to use LUIS.  We can do this by modifyin
 
       * **Do not** change or select on **Auto create App ID and password**, we will get to that later.
 
-5. When it's deployed, navigate to the new Azure Web App Bot Resource.select **Settings** Under **Bot Management**
+5. When it's deployed, navigate to the new `Azure Web App Bot` Resource, select **Settings** under **Bot Management**
 
 6. Select the **Manage** link for the **Microsoft App ID**
 
    ![Select the Manage link](../images/ManageBot.png)
 
-7. Select **New client secret**., give name as **PictureBot** and for expires select **Never** then select **Add**
+7. Select **New client secret**., give name as **PictureBot**. For expires select **Never** and then select **Add**.
 
-8. Record the secret into notepad and select **Overview**, record the application id into notepad
+8. Record the secret into notepad and select **Overview**, also record the `Application Id` into notepad.
 
 9. Navigate back to the **web app bot** resource, under **Bot management**, select the **Test in Web Chat** tab
 
