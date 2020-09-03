@@ -242,7 +242,9 @@ By default, it will load your settings from `settings.json` (it builds it into t
 dotnet run -- -process C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\sample_images	
 ```
 
-Once it's done processing, you can query against your Cosmos DB directly using _TestCLI_ as follows:	
+Once it's done processing, you can query against your Cosmos DB directly using _TestCLI_ as follows:
+
+  ![](media/processing-output.jpg)
 
 ```cmd	
 dotnet run -- -query "select * from images"	
