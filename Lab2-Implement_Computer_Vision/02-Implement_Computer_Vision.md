@@ -60,9 +60,13 @@ Let's talk about how we're going to call Cognitive Services in our application b
 
   ![](media/filepath-image-sln.jpg)
  
- 2.When prompted how to open the file click on **visual studio 2019** and then click **ok**
+ 2. When prompted how to open the file click on **visual studio 2019** and then click **ok**
 
   ![](media/select-visual-studio.jpg)
+  
+ 3. When prompted to sign-in please press sign-in and enter your respective azure credentials from the lab environment details tab:
+ 
+ 
 
 Within your `ImageProcessing` solution you'll find the `ProcessingLibrary` project. It serves as a wrapper around several services. This specific PCL contains some helper classes (in the ServiceHelpers folder) for accessing the Computer Vision API and an "ImageInsights" class to encapsulate the results.
 
