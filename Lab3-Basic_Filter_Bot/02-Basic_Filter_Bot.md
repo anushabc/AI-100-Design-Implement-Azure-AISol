@@ -312,7 +312,7 @@ services.AddBot<PictureBot.Bots.PictureBot>(options =>
 10. Replace the **Configure** method with the following code:
 
 ```csharp
-public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
 {
     _loggerFactory = loggerFactory;
 
