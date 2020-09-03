@@ -10,7 +10,7 @@ Be mindful of the following AI Ethics principles when designing and implementing
 1. *Transparency*: Guard against bias and destruction of human dignity
 1. *Ethical Application*: AI must assist humanity and be designed for intelligent privacy
 
-We encourage you to [read more](https://ai-ethics.azurewebsites.net/) about the Ethical considerations when building intelligent apps.
+We encourage you to read more about the Ethical considerations when building intelligent apps.
 
 
 ## Lab 1.0 Create an Azure Web App Bot
