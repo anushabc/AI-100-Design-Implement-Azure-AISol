@@ -1,5 +1,6 @@
 # Lab 2: Integrate LUIS into Bot Dialogs
 
+
 ## Introduction
 
 Our bot is now capable of taking in a user's input and responding based on the user's input. Unfortunately, our bot's communication skills are brittle. One typo, or a rephrasing of words, and the bot will not understand. This can cause frustration for the user. We can greatly increase the bot's conversational abilities by enabling it to understand natural language with the LUIS model we built in the previous lab.
@@ -8,14 +9,55 @@ We will have to update our bot in order to use LUIS.  We can do this by modifyin
 
 > NOTE: If you intend to use the code in the Finished folder, you MUST replace the app specific information with your own app IDs and endpoints.
 
-## Lab 2.1: Adding natural language understanding
+## Lab 2.1: Create an Azure Web App Bot
+
+1. Navigate to the `Azure portal` from virtual machine.
+
+2. In the portal, navigate to your resource group, then select **+Add** and search for **bot**.
+
+   ![Bot template area is highlighted and the language and bot type is selected.](../images/rg.jpg 'Select the bot type')
+
+3. Select **Web App Bot**, and select **Create**.
+
+4. Provide the follwing details and click on **Create**
+
+      * For the name, you'll have to create a unique identifier. We recommend using something along the lines of PictureBot[i][n] where [i] is your initials and [n] is a number (e.g. mine would be PictureBotamt6).
+
+      * Select a region and for pricing tier, select **F0 (10K Premium Message)**.
+
+      * Select the Bot template area and Select **C#**, then select **Echo Bot**, later we will update it to our our PictureBot.
+
+        ![Bot template area is highlighted and the language and bot type is selected.](../images/lab02-createbot.png 'Select the bot type')
+
+      * Select **OK**, make sure that **Echo Bot** is displayed.
+
+      * Configure a new App service plan (put it in the same location as your bot)
+
+      * You can choose to turn Application Insights on or off.
+
+      * **Do not** change or select on **Auto create App ID and password**, we will get to that later.
+
+5. When it's deployed, navigate to the new Azure Web App Bot Resource.select **Settings** Under **Bot Management**
+
+6. Select the **Manage** link for the **Microsoft App ID**
+
+   ![Select the Manage link](../images/ManageBot.png)
+
+7. Select **New client secret**., give name as **PictureBot** and for expires select **Never** then select **Add**
+
+8. Record the secret into notepad and select **Overview**, record the application id into notepad
+
+9. Navigate back to the **web app bot** resource, under **Bot management**, select the **Test in Web Chat** tab
+
+10. Once it starts, explore what it is capable of doing.  As you will see, it only echos back your message.
+
+    ![The basic echo bot response](../images/EchoBot.png)
+
+## Lab 2.2: Adding natural language understanding
 
 ### Adding LUIS to Startup.cs
 
-1. If not already open, open your **PictureBot** solution in Visual Studio
-
-> **NOTE** You can also start with the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master}/Lab7-Integrate_LUIS/code/Starter/PictureBot/PictureBot.sln** solution if you did not start from Lab 1.
-> Be sure to replace all the app settings values
+1. Navigate to **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master}/Lab7-Integrate_LUIS/code/Starter/PictureBot/PictureBot.sln** and open **PictureBot** solution in Visual Studio
 
 2. Open **Startup.cs** and locate the `ConfigureServices` method. We'll add LUIS here by adding an additional service for LUIS after creating and registering the state accessors.
 
@@ -72,8 +114,14 @@ services.AddSingleton(sp =>
 ```
 
    > **Note** The Luis endpoint url for the .NET SDK should be something like **https://{region}.api.cognitive.microsoft.com** with no api or version after it.
+   
+8. From Azure portal, navigate to resource group and select the storageaccount which starts with **aistorage**
 
-## Lab 2.2: Adding LUIS to PictureBot's MainDialog
+9. Select **Access keys** under settings, copy the **connection string** value to notepad
+
+10. Switch to visual studio and make sure to replace all the recorded values accordingly in **appsettings.json**.Then, save the file.
+
+## Lab 2.3: Adding LUIS to PictureBot's MainDialog
 
 1. Open **PictureBot.cs.**. The first thing you'll need to do is initialize the LUIS recognizer. Below the commented line `// Initialize LUIS Recognizer`, add the following:
 
@@ -163,7 +211,7 @@ Let's briefly go through what we're doing in the new code additions. First, inst
 
 Another thing to note is that after every response that called LUIS, we're adding the LUIS intent value and score. The reason is just to show you when LUIS is being called as opposed to Regex (you would remove these responses from the final product, but it's a good indicator for us as we test the bot).
 
-## Lab 2.3: Testing natural speech phrases
+## Lab 2.4: Testing natural speech phrases
 
 1.Right-click the project, select **Manage Nuget Packagaes** in VSTS
 
@@ -174,9 +222,23 @@ Another thing to note is that after every response that called LUIS, we're addin
    * Microsoft.Bot.Builder.Dialogs
    * Microsoft.Azure.Search (version, 10.1.0 or later)
 
-2. Press **F5** to run the app.
+1. Press **F5** to run the app.
+ 
+1. Launch the Bot Framework Emulator (note we are using the v4 Emulator).  Select **Start**, then search for **Bot Emulator**.
 
-3. Switch to your Bot Emulator. Try sending the bots different ways of searching pictures. What happens when you say "send me pictures of water" or "show me dog pics"? Try some other ways of asking for, sharing and ordering pictures. You have perform this in Module 2
+1. On the welcome page, select **Create a new bot configuration**
+
+1. For the name, type **PictureBot**
+
+1. Enter the url that is displayed on your bot web page
+
+1. Enter the AppId and the App Secret your entered into the appsettings.json
+
+     >**Note** If you do not enter id and secret values into the bot settings you would also not need to enter the values in the bot emulator
+
+1. Select **Save and connect**, then save your .bot file locally
+
+1. You should now be able to converse with the bot. Try sending the bots different ways of searching pictures. What happens when you say "send me pictures of water" or "show me dog pics"? Try some other ways of asking for, sharing and ordering pictures.
 
 If you have extra time, see if there are things LUIS isn't picking up on that you expected it to. Maybe now is a good time to go to luis.ai, [review your endpoint utterances](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/label-suggested-utterances), and retrain/republish your model.
 
