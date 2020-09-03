@@ -208,6 +208,10 @@ We will implement the main processing and storage code as a command-line/console
 
   ![](media/storage-accesskey.jpg)
   
+4.3) To retrieve cosmosdb values, navigate to **cosmodb-{uniqueid}** from resource group **ai-100-{uniqueid}** and get the URI and primary key as shown below:-
+
+  ![](media/cosmo-db.jpg)
+  
 5. If you have not already done so, compile the project	
 6. Open a command prompt and navigate to the build directory for the **TestCLI** project.  It should something like **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\TestCLI1**.
 
