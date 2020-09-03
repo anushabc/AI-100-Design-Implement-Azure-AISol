@@ -96,6 +96,8 @@ Now let's take a step back for a minute. It isn't quite as simple as creating th
 
 1. Navigate to **ImageProcessor.cs** within `ProcessingLibrary`.
 
+  ![](media/image-processor.jpg)
+
 2. Note the following [`using` directives](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive) **to the top** of the class, above the namespace:
 
 ```csharp
