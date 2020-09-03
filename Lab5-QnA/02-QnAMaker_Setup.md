@@ -6,9 +6,11 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 ## Lab 1.1: QnA Maker Setup
 
-1. Switch to the [Azure Portal](https://portal.azure.com) and your lab resource group.
+1. In a web browser, navigate to ```https://portal.azure.com```. You will be redirected to sign-in page, use the credentials provided below for sign-in.
+    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
+    * Azure Password: <inject key="AzureAdUserPassword"></inject>.
 
-2. In the region blade, select **+ Add**
+2.  select **+ Create a Resource**
 
 3. Type **QnA Maker**, then select **QnA Maker**
 
