@@ -77,6 +77,8 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. Open **Visual Studio 2019** or later
 
+  ![](../images/sign-in-prompt.jpg)
+
 1. Select **Create new project**, search for **bot**.
 
 1. Scroll down until you see **Echo Bot (Bot Framework v4)**
