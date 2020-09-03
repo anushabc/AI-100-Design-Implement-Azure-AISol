@@ -24,7 +24,7 @@ In the continuation of this lab throughout the course, we'll show you how to que
 
 ## Lab 1.2: Resources
 
-There are some directories under the `C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master` folder in your virtual machine:
+There are some directories under the `C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision` folder in your virtual machine:
 
 - **sample_images**: Some sample images to use in testing your implementation of Cognitive Services.
 
