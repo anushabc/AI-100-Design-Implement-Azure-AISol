@@ -72,7 +72,7 @@ Let's talk about how we're going to call Cognitive Services in our application b
 
 Within your `ImageProcessing` solution you'll find the `ProcessingLibrary` project. It serves as a wrapper around several services. This specific PCL contains some helper classes (in the ServiceHelpers folder) for accessing the Computer Vision API and an "ImageInsights" class to encapsulate the results.
 
-![Processing Library PCL](../images/ProcessingLibrary.png)
+  ![](media/processing-sln-image.jpg)
 
 You should be able to pick up this portable class library and drop it in your other projects that involve Cognitive Services (some modification will be required depending on which Cognitive Services you want to use).
 
