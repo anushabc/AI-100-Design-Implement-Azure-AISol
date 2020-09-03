@@ -46,9 +46,9 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 1. For the name, type **Microsoft FAQs**
 
-1. For the file, select **Add file**, browse to the **code/surface-pro-4-user-guide-EN.pdf** file
+1. For the file, select **Add file**, browse to the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab5-QnA/surface-pro-4-user-guide-EN.pdf** file
 
-1. For the file, select **Add file**, browse to the **code/Manage Azure Blob Storage** file
+1. For the file, select **Add file**, browse to the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab5-QnA/Manage Azure Blob Storage** file
 
       > **Note** You can find out more about the supported file types and data sources [here](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/data-    sources-supported)
 
