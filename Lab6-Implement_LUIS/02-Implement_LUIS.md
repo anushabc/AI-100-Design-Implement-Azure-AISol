@@ -42,9 +42,7 @@ Creating a LUIS service in the portal is optional, as LUIS provides you with a "
 
 5. Select your subscription and resources group.
 
-6. For the name, type **luisbot{deployment-id}**.
-
-     >**Note:** You can find the deployment-id in the Environment Details tab
+6. For the name, type **luisbot{uniqueid}**.
 
 7. Select Authoring location similar to your resource group
 
