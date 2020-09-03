@@ -62,7 +62,7 @@ Let's look at how we can use LUIS to add some natural language capabilities. LUI
 
    > **Warning**: Though Azure services use IE as the default browser, we do not recommend it for LUIS. You should be able to use Chrome or Firefox for all of the labs. Alternatively, you can download either [Microsoft Edge](https://www.microsoft.com/en-us/download/details.aspx?id=48126) or [Google Chrome](https://www.google.com/intl/en/chrome/).
 
-1. Navigate to [https://www.luis.ai](https://www.luis.ai) (**unless you are located in Europe or Australia***). We will create a new LUIS app to support our bot.
+1. Navigate to [https://www.luis.ai](https://www.luis.ai) in vm (**unless you are located in Europe or Australia***). We will create a new LUIS app to support our bot.
 
      > **Note** If you created a key in a **Europe** region, you will need to create your application at [https://eu.luis.ai/](https://eu.luis.ai/). If you created a key in an **Australia** region, you will need to create your application at [https://au.luis.ai/](https://au.luis.ai/). You can read more about the LUIS publishing regions [here](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-regions).
 
