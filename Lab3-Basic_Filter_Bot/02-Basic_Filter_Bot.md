@@ -21,7 +21,7 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. In the portal, navigate to your resource group, then select **+Add** and search for **bot**.
 
-   <img src="images/rg.jpg"/><br/>
+ ![Bot template area is highlighted and the language and bot type is selected.](../images/rg.jpg 'Select the bot type')
 
 1. Select **Web App Bot**, and select **Create**.
 
