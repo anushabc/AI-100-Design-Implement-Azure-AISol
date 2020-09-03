@@ -385,7 +385,7 @@ Now back to the errors you're seeing. You've said you're going to store this inf
 
 12. Right-click the project and select **Add->Class**, select a Class file and name it **PictureState**
 
-13. Copy the following code into **PictureState.cs**.
+13. Replace the existing code in **PictureState.cs** with the following code
 
 ```csharp
 using System.Collections.Generic;
@@ -414,7 +414,7 @@ namespace Microsoft.PictureBot
 
 15. Right-click the project and select **Add->Class**, select a Class file and name it **PictureBotAccessors**
 
-16. Copy the following into it:
+16. Replace the existing code in **PictureBotAccessors.cs** with the following code
 
 ```csharp
 using System;
