@@ -75,7 +75,7 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 ## Lab 1.1: Creating a simple bot and running it
 
-1. Open **Visual Studio 2019** or later.When prompted to sign-in, please press sign-in and enter your respective azure credentials from the lab environment details tab and after signed-in, close the sign-in prompt tab:
+1. Open **Visual Studio 2019** or later. When prompted to sign-in, please press sign-in and enter your respective azure credentials from the lab environment details tab and after signed-in, close the sign-in prompt tab:
 
   ![](../images/sign-in-prompt.jpg)
   
