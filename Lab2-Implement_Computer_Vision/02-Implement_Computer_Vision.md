@@ -60,6 +60,9 @@ Let's talk about how we're going to call Cognitive Services in our application b
 
   ![](media/filepath-image-sln.jpg)
 
+2.When prompted how to open the file click on **visual studio 2019** and then click **ok**
+
+
 Within your `ImageProcessing` solution you'll find the `ProcessingLibrary` project. It serves as a wrapper around several services. This specific PCL contains some helper classes (in the ServiceHelpers folder) for accessing the Computer Vision API and an "ImageInsights" class to encapsulate the results.
 
 ![Processing Library PCL](../images/ProcessingLibrary.png)
