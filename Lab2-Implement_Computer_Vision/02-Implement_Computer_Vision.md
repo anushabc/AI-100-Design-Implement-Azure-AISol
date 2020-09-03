@@ -218,6 +218,7 @@ We will implement the main processing and storage code as a command-line/console
 
 > **NOTE** Do not navigate to the debug directory	
 > **NOTE** .net core 2.2 is requred installation can be find here https://dotnet.microsoft.com/download/dotnet-core/2.2 
+
 7. Run command **dotnet run**	
 ```cmd	
 Usage:  [options]	
