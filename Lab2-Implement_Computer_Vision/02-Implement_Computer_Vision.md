@@ -214,7 +214,7 @@ We will implement the main processing and storage code as a command-line/console
   
 5. After updating the values, compile the project
 
-6. Open a command prompt and navigate to the build directory for the **TestCLI** project.  It should something like **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\TestCLI1**.
+6. Open a command prompt and navigate to the build directory for the **TestCLI** project.  It should something like **cd C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\TestCLI**.
 
 > **NOTE** Do not navigate to the debug directory	
 > **NOTE** .net core 2.2 is requred installation can be find here https://dotnet.microsoft.com/download/dotnet-core/2.2 
