@@ -19,57 +19,57 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. Navigate to the `Azure portal` from virtual machine.
 
-1. In the portal, navigate to your resource group, then select **+Add** and search for **bot**.
+2. In the portal, navigate to your resource group, then select **+Add** and search for **bot**.
 
  ![Bot template area is highlighted and the language and bot type is selected.](../images/rg.jpg 'Select the bot type')
 
-1. Select **Web App Bot**, and select **Create**.
+3. Select **Web App Bot**, and select **Create**.
 
-1. For the name, you'll have to create a unique identifier. We recommend using something along the lines of PictureBot[i][n] where [i] is your initials and [n] is a number (e.g. mine would be PictureBotamt6).
+4. For the name, you'll have to create a unique identifier. We recommend using something along the lines of PictureBot[i][n] where [i] is your initials and [n] is a number (e.g. mine would be PictureBotamt6).
 
-1. Select a region
+5. Select a region
 
-1. For pricing tier, select **F0 (10K Premium Message)**.
+6. For pricing tier, select **F0 (10K Premium Message)**.
 
-1. Select the Bot template area
+7. Select the Bot template area
 
-1. Select **C#**, then select **Echo Bot**, later we will update it to our our PictureBot.
+8. Select **C#**, then select **Echo Bot**, later we will update it to our our PictureBot.
 
     ![Bot template area is highlighted and the language and bot type is selected.](../images/lab02-createbot.png 'Select the bot type')
 
-1. Select **OK**, make sure that **Echo Bot** is displayed.
+9. Select **OK**, make sure that **Echo Bot** is displayed.
 
-1. Configure a new App service plan (put it in the same location as your bot)
+10. Configure a new App service plan (put it in the same location as your bot)
 
-1. You can choose to turn Application Insights on or off.
+11. You can choose to turn Application Insights on or off.
 
-1. **Do not** change or select on **Auto create App ID and password**, we will get to that later.
+12. **Do not** change or select on **Auto create App ID and password**, we will get to that later.
 
-1. Select **Create**
+13. Select **Create**
 
-1. When it's deployed, navigate to the new Azure Web App Bot Resource.
+14. When it's deployed, navigate to the new Azure Web App Bot Resource.
 
-1. Under **Bot Management**, select **Settings**
+15. Under **Bot Management**, select **Settings**
 
-1. Select the **Manage** link for the **Microsoft App ID**
+16. Select the **Manage** link for the **Microsoft App ID**
 
       ![Select the Manage link](../images/ManageBot.png)
 
-1. Select **New client secret**
+17. Select **New client secret**
 
-1. For the name, type **PictureBot**
+18. For the name, type **PictureBot**
 
-1. For the expires, select **Never**
+19. For the expires, select **Never**
 
-1. Select **Add**
+20. Select **Add**
 
-1. Record the secret into notepad or similar for later use in the lab(s).
+21. Record the secret into notepad or similar for later use in the lab(s).
 
-1. Select **Overview**, record the application id into notepad or similar for later use in the lab(s).
+22. Select **Overview**, record the application id into notepad or similar for later use in the lab(s).
 
-1. Navigate back to the **web app bot** resource, under **Bot management**, select the **Test in Web Chat** tab
+23. Navigate back to the **web app bot** resource, under **Bot management**, select the **Test in Web Chat** tab
 
-1. Once it starts, explore what it is capable of doing.  As you will see, it only echos back your message.
+24. Once it starts, explore what it is capable of doing.  As you will see, it only echos back your message.
 
 ![The basic echo bot response](../images/EchoBot.png)
 
