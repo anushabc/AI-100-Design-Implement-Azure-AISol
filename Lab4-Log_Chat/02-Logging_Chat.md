@@ -25,7 +25,7 @@ Let's take a look and what information we can glean, for testing purposes, witho
 
 1. Open your **PictureBot.sln** in Visual Studio.
 
-> **Note** You can use the **Starter** solution if you did not do Lab 3.
+> **Note** You can use the **Starter** solution if you did not do Lab 1.
 
 2. Press **F5** to run your bot
 
