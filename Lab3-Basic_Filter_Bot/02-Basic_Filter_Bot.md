@@ -236,7 +236,7 @@ The SDK allows you to write your own middleware or add reusable components of mi
 
 6. Right-click on the **Middleware** folder and select **Add>Existing Item**.
 
-7. Navigate to **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab3-Basic_Filter_Bot\code\Middleware **, select all three files, and select **Add**
+7. Navigate to **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab3-Basic_Filter_Bot\code\Middleware**, select all three files, and select **Add**
 
 8. Add the following variables to your **Startup** class:
 
