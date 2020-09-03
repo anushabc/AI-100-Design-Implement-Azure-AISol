@@ -111,16 +111,6 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
 
 1. If you are not prompted then you will need to manually rename the class and then change all references to the class to **PictureBot**.  You will know if you missed one when you attempt to build the project.
 
-1. Open Startup.cs file and  make sure that **using PictureBot.Bots;** is inside the namespace **PictureBot** and outside the class Startup. 
-
-   ```csharp
-      namespace PictureBot
-             {
-                 using PictureBot.Bots;
-                 public class Startup
-                    {
-   ```
-
 1. Right-click the project, select **Manage Nuget Packagaes**
 
 1. Select the **Browse** tab, and install the following packages, ensure that you are using version **4.6.3**:
