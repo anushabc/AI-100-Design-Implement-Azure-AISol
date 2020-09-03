@@ -194,6 +194,8 @@ We will implement the main processing and storage code as a command-line/console
 
 > **Note** the url for cognitive services should end with **/vision/v1.0** for the project oxford apis.  For example `https://westus2.api.cognitive.microsoft.com/vision/v1.0`.	
 
+  ![](media/setting-json.jpg)
+  
 3. If you have not already done so, compile the project	
 4. Open a command prompt and navigate to the build directory for the **TestCLI** project.  It should something like **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\TestCLI1**.
 
