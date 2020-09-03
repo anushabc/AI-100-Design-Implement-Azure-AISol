@@ -198,12 +198,18 @@ We will implement the main processing and storage code as a command-line/console
 
   ![](media/setting-json.jpg)
   
-4. If you have not already done so, compile the project	
-5. Open a command prompt and navigate to the build directory for the **TestCLI** project.  It should something like **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\TestCLI1**.
+4. To get the necessary items,navigate to your azure portal using the azure credentials from environment details tab. Then find the respective ones as shown in the below images:-
+
+4.1)To get the cognitive services details, navigate to **cogscompvis** from your resource group and get the keys and endpoint as shown below :-
+
+  ![](media/cog-comp-vision.jpg)
+  
+5. If you have not already done so, compile the project	
+6. Open a command prompt and navigate to the build directory for the **TestCLI** project.  It should something like **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\TestCLI1**.
 
 > **NOTE** Do not navigate to the debug directory	
 > **NOTE** .net core 2.2 is requred installation can be find here https://dotnet.microsoft.com/download/dotnet-core/2.2 
-6. Run command **dotnet run**	
+7. Run command **dotnet run**	
 ```cmd	
 Usage:  [options]	
 Options:	
