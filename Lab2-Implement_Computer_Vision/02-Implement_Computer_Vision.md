@@ -200,15 +200,15 @@ We will implement the main processing and storage code as a command-line/console
   
 4. To get the necessary items,navigate to your azure portal using the azure credentials from environment details tab. Then find the respective ones as shown in the below images:-
 
-4.1) To get the cognitive services details, navigate to **cogscompvis** from resource group **ai-100-{uniqueid}** and get the keys and endpoint as shown below :-
+i) To get the cognitive services details, navigate to **cogscompvis** from resource group **ai-100-{uniqueid}** and get the keys and endpoint as shown below :-
 
   ![](media/cog-comp-vision.jpg)
   
-4.2) To retrieve storage account values, navigate to storage account **aistorage-{uniqueid}** from resource group **ai-100-{uniqueid}** and get the connection string as shown below:-
+ii) To retrieve storage account values, navigate to storage account **aistorage-{uniqueid}** from resource group **ai-100-{uniqueid}** and get the connection string as shown below:-
 
   ![](media/storage-accesskey.jpg)
   
-4.3) To retrieve cosmosdb values, navigate to **cosmodb-{uniqueid}** from resource group **ai-100-{uniqueid}** and get the URI and primary key as shown below:-
+iii) To retrieve cosmosdb values, navigate to **cosmodb-{uniqueid}** from resource group **ai-100-{uniqueid}** and get the URI and primary key as shown below:-
 
   ![](media/cosmo-db.jpg)
   
