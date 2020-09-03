@@ -59,7 +59,7 @@ Let's talk about how we're going to call Cognitive Services in our application b
 1. From virtual machine, open the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab2-Implement_Computer_Vision\code\Finished\ImageProcessing.sln** solution in Visual Studio.
 
   ![](media/filepath-image-sln.jpg)
-
+ 
 2.When prompted how to open the file click on **visual studio 2019** and then click **ok**
 
   ![](media/select-visual-studio.jpg)
