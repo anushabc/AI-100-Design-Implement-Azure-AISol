@@ -17,7 +17,7 @@ We encourage you to read more about the Ethical considerations when building int
 
 A bot created using the Microsoft Bot Framework can be hosted at any publicly-accessible URL.  For the purposes of this lab, we will register our bot using [Azure Bot Service](https://docs.microsoft.com/en-us/bot-framework/bot-service-overview-introduction).
 
-1. Navigate to the [Azure portal](https://portal.azure.com).
+1. Navigate to the `Azure portal` from virtual machine.
 
 1. In the portal, navigate to your resource group, then select **+Add** and search for **bot**.
 
