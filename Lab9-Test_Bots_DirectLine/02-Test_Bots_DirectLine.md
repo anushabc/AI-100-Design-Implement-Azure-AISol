@@ -325,13 +325,3 @@ Postman makes this very easy for us to configure:
 10. Inspect the response returned.  You should find the image url displayed within the images array of the response
 
 ![Images Array Example](../images//imagesarray.png)
-
-## Going further
-
-Have extra time? Can you leverage curl (download link: https://curl.haxx.se/download.html) from the terminal to retrieve conversations (like you did for Postman)?
-
-> Hint: your command may look similar to `curl -H "Authorization:Bearer {SecretKey}" https://directline.botframework.com/api/conversations/{conversationId}/messages -XGET`
-
-## Resources
-
-- [Direct Line API](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-direct-line-3-0-concepts)
