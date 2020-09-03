@@ -166,7 +166,3 @@ The first line takes the incoming message from a user and stores it in a variabl
 ```
 
 >Get stuck or broken? You can find the solution for the lab up until this point under [/code/PictureBot-FinishedSolution-File](./code/PictureBot-FinishedSolution-File). You will need to insert the keys for your Azure Bot Service and your Azure Storage settings in the `appsettings.json` file. We recommend using this code as a reference, not as a solution to run, but if you choose to run it, be sure to add the necessary keys.
-
-## Going further
-
-To incorporate database storage and testing into your logging solution, we recommend the following self-led tutorials that build on this solution : [Storing Data in Cosmos](https://github.com/Azure/LearnAI-Bootcamp/blob/master/lab02.5-logging_chat_conversations/3_Cosmos.md).
