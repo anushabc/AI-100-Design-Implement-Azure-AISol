@@ -170,6 +170,8 @@ return result;
 
 8. In order to use this application, we need to build the project, press **Ctrl-Shift-B**, of select the **Build** menu and choose **Build Solution**.
 
+  ![](media/build-solution.jpg)
+
 9. Work with your instructor to fix any errors.
 
 ### Exploring Cosmos DB	
