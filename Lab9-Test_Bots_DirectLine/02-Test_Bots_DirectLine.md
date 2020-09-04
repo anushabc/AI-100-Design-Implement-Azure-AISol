@@ -35,7 +35,15 @@ Over the course of the last few labs, we have collected various keys. You will n
 >- Cosmos DB Key:
 >- DirectLine Key:
 
-Ensure that you update the **appsettings.json** file with all the necessary values.
+Ensure that you update the **appsettings.json** file with all the necessary values. 
+
+```
+Note:
+
+For LUIS API App ID: Navigate to https://www.luis.ai and create the app.
+Other value you can find in azure portal pre-provision environment
+
+```
 
 ## Lab 4.1: Publish Your Bot
 
