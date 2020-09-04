@@ -115,8 +115,7 @@ switch (result.DetectedLanguages[0].Name)
   "MicrosoftAppId": "YourAppID",
   "MicrosoftAppPassword": "YourAppIDKey",
   "BlobStorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=XXXXX;AccountKey=XXXXX;EndpointSuffix=core.windows.net",
-  "BlobStorageContainer": "chatlog",
-  "luisAppId": "YourLouisAppID",
+  "BlobStorageContainer": "chatlog"
 
 ```
 
