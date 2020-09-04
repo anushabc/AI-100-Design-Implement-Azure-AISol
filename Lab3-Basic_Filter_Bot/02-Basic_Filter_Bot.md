@@ -124,6 +124,22 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
       * Microsoft.Bot.Builder.Dialogs
       * Microsoft.Azure.Search (version, 10.1.0 or later)
       
+1. Navigate to **Startup.cs** file and add the below using statement in `namespace PictureBot`:
+
+```
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder.Integration.AspNet.Core;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+namespace PictureBot
+{
+    using PictureBot.Bots;
+    public class Startup
+```
+
 1. Build the solution.
 
     >**TIP**:  If you only have one monitor and you would like to easily switch between instructions and Visual Studio, you can now add the instruction files to your Visual Studio solution by right-clicking on the project in Solution Explorer and selecting **Add > Existing Item**. Navigate to "Lab2," and add all the files of type "MD File."
