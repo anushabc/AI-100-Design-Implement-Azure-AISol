@@ -4,11 +4,11 @@ In this lab we are going to integrate language detection ability of cognitive se
 
 ## Lab 3.1: Retrieve your Cognitive Services url and keys
 
-1. Open the [Azure Portal](https://portal.azure.com)
+1. Open the Azure Portal https://portal.azure.com
 
 2. Navigate to your resource group, select the cognitive services resource that is generic (aka, it contains all end points).
 
-3. Under **RESOURCE MANAGEMENT**, select the **Quick Start** tab and record the url and the key for the cognitive services resource
+3. Under **RESOURCE MANAGEMENT**, select the **Keys and Endpoint** tab and record the Endpoint and the key 1 for the cognitive services resource
 
 ## Lab 3.2: Add language support to your bot
 
@@ -109,9 +109,20 @@ switch (result.DetectedLanguages[0].Name)
 
 `Note: For cogsBaseURL and cogsKey you will get in your azure environment`
 
-14. Press **F5** to start your bot
+14. Also, add following value that you collect in previous Labs.
 
-15. Using the Bot Emulator, send in a few phrases and see what happens:
+```
+  "MicrosoftAppId": "YourAppID",
+  "MicrosoftAppPassword": "YourAppIDKey",
+  "BlobStorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=XXXXX;AccountKey=XXXXX;EndpointSuffix=core.windows.net",
+  "BlobStorageContainer": "chatlog",
+  "luisAppId": "YourLouisAppID",
+
+```
+
+15. Press **F5** to start your bot
+
+16. Using the Bot Emulator, send in a few phrases and see what happens:
 
 - Como Estes?
 - Bon Jour!
