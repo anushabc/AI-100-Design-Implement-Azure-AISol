@@ -130,7 +130,7 @@ switch (result.DetectedLanguages[0].Name)
 "luisEndPoint": ""
 ```
 
-`Note: For cogsBaseURL and cogsKey you will get in your azure environment` and use the values of LUIS app you copied earlier to notepad
+`Note: For cogsBaseURL and cogsKey you will get in your azure environment and use the values of LUIS app you copied earlier to notepad`
 
 14. Also, add following value that you collect in previous Labs.
 
