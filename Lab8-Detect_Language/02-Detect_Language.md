@@ -2,11 +2,31 @@
 
 In this lab we are going to integrate language detection ability of cognitive services into our bot.
 
+## Lab 3.0:Creating a LUIS APP
+
+1. Navigate to [https://www.luis.ai](https://www.luis.ai). We will create a new LUIS app to support our bot.
+
+1. Sign in using the azure credentials provided.You can get the credentials from the **Environment Details** page.
+
+1. On the **My Apps** dashboard, select your **Subscription** and **Authoring resource** from the dropdown menu.
+
+1. Click on **+ New app for conversation**, from the dropdown select **New app for conversation**
+
+1. On the **Create new app** page, type a name, description and select Done. Close the "How to create an effective LUIS app" dialog.
+
+1. From the Luisapp dashboard, select the Luis app which we created in the previous lab and click on Manage in the top toolbar.
+
+1. Select Settings from the left hand side menu and copy the App ID value to notepad.
+
+1. From Azure portal, navigate to resource group and select the cognitive service resource that starts with **luisbot**
+
+1. Select Keys and Endpoint from the left hand side menu which is under **Resource Management** and copy the values of **Key1** and **Endpoint** into notepad.
+
 ## Lab 3.1: Retrieve your Cognitive Services url and keys
 
 1. Open the Azure Portal https://portal.azure.com
 
-2. Navigate to your resource group, select the cognitive services resource that is generic (aka, it contains all end points).
+2. Navigate to your resource group, select the cognitive services resource **cogsmoderator**.
 
 3. Under **RESOURCE MANAGEMENT**, select the **Keys and Endpoint** tab and record the Endpoint and the key 1 for the cognitive services resource
 
@@ -100,14 +120,17 @@ switch (result.DetectedLanguages[0].Name)
 }
 ```
 
-13. Open the **appsettings.json** file and ensure that your cognitive services settings are entered:
+13. Open the **appsettings.json** file and ensure that your cognitive services settings and LUIS app settings are entered:
 
 ```csharp
 "cogsBaseUrl": "",
-"cogsKey" :  ""
+"cogsKey" :  "",
+"luisAppId": "",
+"luisAppKey": "",
+"luisEndPoint": ""
 ```
 
-`Note: For cogsBaseURL and cogsKey you will get in your azure environment`
+`Note: For cogsBaseURL and cogsKey you will get in your azure environment` and use the values of LUIS app you copied earlier to notepad
 
 14. Also, add following value that you collect in previous Labs.
 
