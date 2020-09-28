@@ -124,8 +124,13 @@ A bot created using the Microsoft Bot Framework can be hosted at any publicly-ac
       * Microsoft.Bot.Builder.Dialogs
       * Microsoft.Azure.Search (version, 10.1.0 or later)
       
-1. Navigate to **Startup.cs** file and add the below using statement in `namespace PictureBot`:
+1. Navigate to **Startup.cs** file and add the below line of code in `namespace PictureBot`:
 
+```csharp
+    using PictureBot.Bots;
+   ```
+  
+  After adding, it looks like below.
 ```
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -201,6 +206,8 @@ For example, if I say "Hello bot" and the bot responds "Hi, how are you?" that i
      Note how it says we will bypass ngrok for local addresses. We will not be using ngrok in this workshop, but we would if we were connecting to our published version of the bot, we would do so via the 'production' endpoint. Open the 'production' endpoint and observe the difference between bots in different environments. This can be a useful feature when you're testing and comparing your development bot to your production bot.
 
    You can read more about using the Emulator [here](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
+   
+1. Return to visual studio and press **Shift+F5** to stop debugging.
 
 1. Browse around and examine the sample bot code. In particular:
 
@@ -269,7 +276,7 @@ The SDK allows you to write your own middleware or add reusable components of mi
 9. Replace the following code in the **ConfigureServices** method:
 
    ```csharp
-      services.AddTransient<IBot, PictureBot.Bots.PictureBot>();
+      services.AddTransient<IBot, PictureBot>();
    ```
 
 with the following code:
@@ -390,6 +397,7 @@ services.AddSingleton<PictureBotAccessors>(sp =>
     return accessors;
 });
 ```
+    >**Note**: You can add the above lines of code anywhere in the **ConfigureServices** method
 
 You should see an error (red squiggly) beneath some of the terms. But before fixing them, you may be wondering why we had to create two accessors, why wasn't one enough?
 
@@ -821,6 +829,7 @@ if (conversationState == null)
 ```
 services.AddMvc(option => option.EnableEndpointRouting = false);
 ```
+    >**Note**: You can add the above line of code anywhere in the **ConfigureServices** method
 
 Without adding LUIS, our bot is really only going to pick up on a few variations, but it should capture a good bit of messages, if the users are using the bot for searching and sharing and ordering pictures.
 
@@ -903,6 +912,7 @@ public async Task<DialogTurnResult> MainMenuAsync(WaterfallStepContext stepConte
     }
 }
 ```
+    >**Note**: You can add the above lines of code after **public override async Task OnTurnAsync** method in the **PictureBot** class
 
 2. Press **F5** to run the bot.
 
@@ -919,6 +929,8 @@ public async Task<DialogTurnResult> MainMenuAsync(WaterfallStepContext stepConte
 
 >Hint: Use break points to trace matching to case "search", starting from **PictureBot.cs**.
 >Get stuck or broken? You can find the solution for the lab up until this point under [resources/code/Finished](./code/Finished). The readme file within the solution (once you open it) will tell you what keys you need to add in order to run the solution. We recommend using this as a reference, not as a solution to run, but if you choose to run it, be sure to add the necessary keys for your enviroment.
+
+1. Return to visual studio and press **Shift+F5** to stop debugging.
 
 ## Resources
 
