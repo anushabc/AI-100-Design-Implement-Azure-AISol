@@ -10,7 +10,7 @@ In this lab we are going to integrate language detection ability of cognitive se
 
 1. On the **My Apps** dashboard, select your **Subscription** and **Authoring resource** from the dropdown menu.
 
-1. Click on **+ New app for conversation**, from the dropdown select **New app for conversation**
+1. To create a new app, click on **+ New app for conversation**, from the dropdown select **New app for conversation**
 
 1. On the **Create new app** page, type a name, description and select Done. Close the "How to create an effective LUIS app" dialog.
 
