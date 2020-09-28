@@ -26,7 +26,7 @@ In this lab we are going to integrate language detection ability of cognitive se
 
 1. Open the Azure Portal https://portal.azure.com
 
-2. Navigate to your resource group, select the cognitive services resource **cogsmoderator**.
+2. Navigate to your resource group, select the cognitive services resource named **cogsmoderator**.
 
 3. Under **RESOURCE MANAGEMENT**, select the **Keys and Endpoint** tab and record the Endpoint and the key 1 for the cognitive services resource
 
