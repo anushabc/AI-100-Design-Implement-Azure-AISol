@@ -66,7 +66,7 @@ Let's look at how we can use LUIS to add some natural language capabilities. LUI
 
 > **Note** If you created a key in a **Europe** region, you will need to create your application at [https://eu.luis.ai/](https://eu.luis.ai/). If you created a key in an **Australia** region, you will need to create your application at [https://au.luis.ai/](https://au.luis.ai/). You can read more about the LUIS publishing regions [here](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-regions).
 
-1. Sign in using your Organization or Microsoft account. This should be the same account that you used to create the LUIS key in the previous section.
+1. Sign in using the azure credentials provided. This should be the same account that you used to create the LUIS key in the previous section.
 
 1. Select **Create a LUIS app now**. You should be redirected to a list of your LUIS applications.  If prompted, select **Migrate Later**.  
 
