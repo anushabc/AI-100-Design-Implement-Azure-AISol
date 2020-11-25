@@ -158,15 +158,29 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 1. Extract the zip file to your local computer
 
-1. Open the .sln solution file with Visual Studio 2019
+1. Open the QnABot .sln solution file with Visual Studio 2019. When prompted how to open the file click on visual studio 2019 and then click ok.
 
    ![](./images/img28.png)
+   
+   ![](./images/img29.png)
 
-1. Open the **Startup.cs** file, you will notice nothing special has been added here
+1. When prompted to sign-in, please press sign-in and enter your respective azure credentials from the lab environment details tab and after signed-in, close the sign-in prompt tab:
+
+   ![](./images/img30.png)
+
+1. In visual studio expand QnABot file and open the **Startup.cs** file, you will notice nothing special has been added here
+
+   ![](./images/img31.png)
+   
+   ![](./images/img32.png)
 
 1. Open the **Bots/{BotName}.cs** file and review the code that was generated for this file
 
+   ![](./images/img33.png)
+
 1. Open the **BotService.cs** file and review the code that was generated for this file.
+
+   ![](./images/img34.png)
 
 [!NOTE] The previous steps for reviewing the generated code are correct for the solution that was downloaded during the authoring of this lab.  The solution files may change from time to time based on updates to the frameworks and SDKs so the solution files may differ.  The key aspect here is just have you review the code that is automatically generated from the tool.
 
