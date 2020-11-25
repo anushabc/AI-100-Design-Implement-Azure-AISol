@@ -70,6 +70,8 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 1. Select your Azure AD and Subscription tied to your QnA Maker resource, then select your newly created QnA Maker resource and your target language.
 
+   ![](./images/img10.png)
+
 1. For the name, type **Microsoft FAQs**
 
 1. For the file, select **Add file**, browse to the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab5-QnA/surface-pro-4-user-guide-EN.pdf** file
