@@ -93,7 +93,11 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 1. For the **Chit-chat**, select **Witty**
 
+   ![](./images/img16.png)
+
 1. Select **Create your KB**
+
+   ![](./images/img17.png)
 
 > **NOTE** This can take a few minutes.
 
