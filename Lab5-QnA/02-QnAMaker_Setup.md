@@ -64,6 +64,8 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 1. In the top navigation area, select **Create a knowledge base**
 
+   ![](./images/img9.png)
+
 1. Skip **STEP 1** as you have already created the resource
 
 1. Select your Azure AD and Subscription tied to your QnA Maker resource, then select your newly created QnA Maker resource and your target language.
