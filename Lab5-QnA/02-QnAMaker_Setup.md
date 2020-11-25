@@ -56,6 +56,8 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 - Search Service
 - Cognitive Service instance of type QnAMaker
 
+  ![](./images/img7.png)
+
 ## Lab 1.2: Create a KnowledgeBase
 
 1. Open the ```https://www.qnamaker.ai/```
