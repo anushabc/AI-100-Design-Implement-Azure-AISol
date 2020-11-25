@@ -58,7 +58,9 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 1. Open the ```https://www.qnamaker.ai/```
 
-1. In the top right, select **Sign in**.  Login using the Azure credentials for your new QnA Maker resource
+1. In the top right, select **Sign in**.  Login using the Azure credentials for your new QnA Maker resource.
+
+   ![](./images/img8.png)
 
 1. In the top navigation area, select **Create a knowledge base**
 
