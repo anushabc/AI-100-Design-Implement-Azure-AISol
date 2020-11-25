@@ -10,9 +10,13 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject>
     * Azure Password: <inject key="AzureAdUserPassword"></inject>.
 
-2.  select **+ Create a Resource**
+2. Now in the azure portal, select **+ Create a Resource**
 
-3. Type **QnA Maker**, then select **QnA Maker**
+    ![](./images/img1.png)
+
+3. In the search bar type **QnA Maker**, then select **QnA Maker**
+
+    ![](./images/img2.png)
 
 4. Select **Create**
 
