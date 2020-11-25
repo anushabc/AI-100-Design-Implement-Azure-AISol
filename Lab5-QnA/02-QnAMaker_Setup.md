@@ -22,9 +22,7 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
   
    ![](./images/img3.png)
    
-5. On the create page enter the following details:
-
-   **Project details**
+5. On the create page under **Project details** enter the following details:
    
    - **Resource Group** : Select ai-100-deploymentid resource group
    
@@ -34,17 +32,15 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
    
    ![](./images/img4.png)
    
-   **Azure Search details - for data**
+6. On the same page under **Azure Search details - for data** enter:
    
    - **Azure search pricing tier** : select the **F** tier
    
    ![](./images/img5.png)
    
-   **App Service details - for runtime**
+7. Now under **App Service details - for runtime** enter the following and select **Review + create**.
    
    - **App name** : Enter an app name, it must be unique
-   
-   Select **Review + create**
    
    ![](./images/img6.png)
 
