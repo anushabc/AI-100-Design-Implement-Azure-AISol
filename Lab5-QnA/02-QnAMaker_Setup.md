@@ -150,13 +150,17 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
    ![](./images/img25.png)
    
-   [](./images/img26.png)
-
+   ![](./images/img26.png)
+  
 1. Azure will build your source code, when complete, select **Download Bot source code**, if prompted, select **Yes**
+
+   ![](./images/img27.png)
 
 1. Extract the zip file to your local computer
 
 1. Open the .sln solution file with Visual Studio 2019
+
+   ![](./images/img28.png)
 
 1. Open the **Startup.cs** file, you will notice nothing special has been added here
 
