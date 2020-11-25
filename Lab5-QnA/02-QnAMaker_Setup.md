@@ -149,6 +149,8 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 1. Select **Download Bot source code**, when prompted select **Yes**.  
 
    ![](./images/img25.png)
+   
+   [](./images/img26.png)
 
 1. Azure will build your source code, when complete, select **Download Bot source code**, if prompted, select **Yes**
 
