@@ -12,13 +12,15 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 2. Now in the azure portal, select **+ Create a Resource**
 
-    ![](./images/img1.png)
+   ![](./images/img1.png)
 
 3. In the search bar type **QnA Maker**, then select **QnA Maker**
 
-    ![](./images/img2.png)
+   ![](./images/img2.png)
 
 4. Select **Create**
+  
+   ![](./images/img3.png)
 
 5. Type a name
 
