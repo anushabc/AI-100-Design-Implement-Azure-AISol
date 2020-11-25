@@ -84,6 +84,11 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 1. For the file, again select **Add file**, browse to the **C:\AllFiles\AI-100-Design-Implement-Azure-AISol-master\Lab5-QnA/Manage Azure Blob Storage** file and click on open.
 
+   ![](./images/img15.png)
+
+   ![](./images/img14.png)
+
+
       > **Note** You can find out more about the supported file types and data sources ```https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/data-    sources-supported```
 
 1. For the **Chit-chat**, select **Witty**
