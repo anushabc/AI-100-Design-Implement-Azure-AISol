@@ -113,17 +113,19 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
    ![](./images/img19.png)
 
+   ![](./images/img20.png)
+   
 1. If prompted, login as the account tied to your lab resource group.
 
 1. On the bot service creation page, fix any naming errors, then select **Create**.
 
-   ![](./images/img20.png)
+   ![](./images/img21.png)
 
    > **Note**  Recent change in Azure requires dashes ("-") be removed from some resource names
 
 1. Once the bot resource is created, navigate to the new **Web App Bot**, then select **Test in Web Chat**
 
-   ![](./images/img21.png)
+   ![](./images/img22.png)
 
 1. Ask the bot any questions related to a Surface Pro 4 or managing Azure Blog Storage:
 
@@ -132,7 +134,7 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
       - How do I hard reset?
       - What is a blob?
 
-      ![](./images/img22.png)
+      ![](./images/img23.png)
       
 1. Ask it some questions it doesn't know, such as:
 
