@@ -21,16 +21,32 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 4. Select **Create**
   
    ![](./images/img3.png)
+   
+5. On the create page enter the following details:
 
-5. Type a name
-
-6. Select the **S0** tier for the resource pricing tier.  We aren't using the free tier because we will upload files that are larger than 1MB later.
-
-7. Select your resource group
-
-8. For the search pricing tier, select the **F** tier
-
-9. Enter an app name, it must be unique
+   **Project details**
+   
+   - **Resource Group** : Select ai-100-deploymentid resource group
+   
+   - **Name** : Enter a unique name 
+   
+   - **Pricing tier** : Select the **S0** tier. We aren't using the free tier because we will upload files that are larger than 1MB later.
+   
+   ![](./images/img4.png)
+   
+   **Azure Search details - for data**
+   
+   - **Azure search pricing tier** : select the **F** tier
+   
+   ![](./images/img5.png)
+   
+   **App Service details - for runtime**
+   
+   - **App name** : Enter an app name, it must be unique
+   
+   Select **Review + create**
+   
+   ![](./images/img6.png)
 
 10. Select **Create**.  This will create the following resources in your resource group:
 
