@@ -107,11 +107,17 @@ In this lab we will explore the QnA Maker for creating bots that connect to a pr
 
 1. In the top menu, select **PUBLISH**.  
 
+   ![](./images/img18.png)
+
 1. On the publish page, select **Publish**.  Once the service is published, select the **Create Bot** button on the success page
+
+   ![](./images/img19.png)
 
 1. If prompted, login as the account tied to your lab resource group.
 
 1. On the bot service creation page, fix any naming errors, then select **Create**.
+
+   ![](./images/img20.png)
 
       > **Note**  Recent change in Azure requires dashes ("-") be removed from some resource names
 
